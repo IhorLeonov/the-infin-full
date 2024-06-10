@@ -59,6 +59,7 @@
 
 .button {
   @include main-button;
+  margin-right: 46px;
 
   background: none;
   font-weight: 500;
@@ -73,18 +74,22 @@
   }
 }
 
-.buttonReview {
+.buttonLightAccent {
   color: $light;
   border-color: $light;
 }
 
-.buttonGetStarted {
+.buttonDarkDark {
   &:hover,
   &:focus {
     color: $light;
     background-color: $dark;
     border-color: transparent;
   }
+}
+
+.buttonHidden {
+  visibility: hidden;
 }
 
 @media screen and (max-width: $maxTablet) {

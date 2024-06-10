@@ -8,19 +8,13 @@ import Reviews from '@/components/organisms/HomeComponents/Reviews';
 import BottomComponent from '@/components/BottomComponent';
 import LargeImage from '@/components/organisms/LargeImage';
 
-import { fetchDataFromCMS } from '@/lib/api';
-
 interface HomePageProps {}
 
 export default async function HomePage({}: HomePageProps) {
-  const { data } = await fetchDataFromCMS();
-
-  const content = data.theInfin.theInfinDetail;
-
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <Hero content={content} />
+        <Hero />
         <LargeImage
           sectionName="home-image"
           mobileImage="/images/presentation-mobile.png"

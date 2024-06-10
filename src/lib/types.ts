@@ -12,9 +12,9 @@ export interface CardProps {
 }
 
 export type TypeActiveSection =
-  | 'home-image'
   | 'business'
   | 'individuals'
   | 'reviews'
   | 'getstarted'
-  | 'undefined';
+  | 'undefined'
+  | 'home-image';

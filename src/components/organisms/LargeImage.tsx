@@ -10,18 +10,21 @@ import Image from 'next/image';
 import useTargetInView from '@/hooks/useTargetInView';
 import useCheckIsMobile from '@/hooks/useCheckIsMobile';
 import { TypeActiveSection } from '@/lib/types';
+import clsx from 'clsx';
 
-interface HeroImageProps {
-  sectionName: TypeActiveSection;
+interface LargeImageProps {
+  className?: string;
+  sectionName?: TypeActiveSection;
   mobileImage: string;
   desctopImage: string;
 }
 
-export default function HeroImage({
+export default function LargeImage({
+  className,
   sectionName,
   mobileImage,
   desctopImage,
-}: HeroImageProps) {
+}: LargeImageProps) {
   const { isMobile } = useCheckIsMobile();
   const { setActiveSection, removeActiveSection } = useContext(
     AppContext,
@@ -40,12 +43,17 @@ export default function HeroImage({
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.25]);
 
   useEffect(() => {
-    isInView ? setActiveSection(sectionName) : removeActiveSection(sectionName);
+    if (sectionName) {
+      isInView
+        ? setActiveSection(sectionName)
+        : removeActiveSection(sectionName);
+    }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isInView]);
 
   return (
-    <div className={styles.wrapper} ref={containerRef}>
+    <div className={clsx(styles.wrapper, className)} ref={containerRef}>
       <div ref={targetRef} />
       <motion.div style={{ scale }} className={styles.imageContainer}>
         {isMobile ? (

@@ -9,7 +9,7 @@ import { AppContext, IAppContext } from '@/context/app.context';
 import { Button } from '../atoms/Button';
 import { colors } from '@/lib/constants';
 import { useSwipeable } from 'react-swipeable';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 import Logo from '../atoms/Logo';
 import useCheckIsMobile from '@/hooks/useCheckIsMobile';
@@ -21,13 +21,14 @@ import Link from 'next/link';
 interface HeaderProps {}
 
 export default function Header({}: HeaderProps) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const targetRef = useRef(null);
+
+  const { isInView } = useTargetInView(targetRef);
   const { light, dark, accent } = colors;
   const { activeSection } = useContext(AppContext) as IAppContext;
   const { isTablet } = useCheckIsMobile();
-  const router = useRouter();
-
-  const targetRef = useRef(null);
-  const { isInView } = useTargetInView(targetRef);
 
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
@@ -71,9 +72,6 @@ export default function Header({}: HeaderProps) {
     };
   };
 
-  const colorCondition =
-    activeSection?.includes('reviews') || activeSection?.includes('home-image');
-
   const handleMenuOpen = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -101,6 +99,45 @@ export default function Header({}: HeaderProps) {
     };
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    if (!isTablet) {
+      setIsMenuOpen(false);
+    }
+  }, [isTablet]);
+
+  const calculateLogoColor = () => {
+    if (pathname === '/') {
+      if (
+        isMenuOpen ||
+        activeSection?.includes('reviews') ||
+        activeSection?.includes('home-image')
+      ) {
+        return accent;
+      }
+    } else if (pathname === '/contact') {
+      return accent;
+    } else {
+      return dark;
+    }
+  };
+
+  const calculateLinksColor = () => {
+    if (pathname === '/') {
+      if (
+        activeSection?.includes('reviews') ||
+        activeSection?.includes('home-image')
+      ) {
+        return light;
+      } else {
+        return dark;
+      }
+    } else if (pathname === '/contact') {
+      return light;
+    } else {
+      return dark;
+    }
+  };
+
   return (
     <>
       <div ref={targetRef} />
@@ -115,24 +152,24 @@ export default function Header({}: HeaderProps) {
             variants={variantsLogo}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            <Logo
-              className={styles.logo}
-              fill={(isMenuOpen && isTablet) || colorCondition ? accent : dark}
-            />
+            <Logo className={styles.logo} fill={calculateLogoColor()} />
           </motion.div>
 
-          <nav
-            className={styles.nav}
-            style={{
-              color: colorCondition ? light : dark,
-            }}
-          >
+          <nav className={styles.nav}>
             <motion.div
               variants={variantsLink(1)}
-              transition={{ duration: 0, delay: isInView ? 0.5 : 0.1 }}
+              transition={{
+                duration: 0,
+                delay: isInView ? 0.5 : 0.1,
+              }}
             >
               <Link href="/" className={styles.link}>
-                Home
+                <motion.span
+                  animate={{ color: calculateLinksColor() }}
+                  transition={{ duration: 0.5 }}
+                >
+                  Home
+                </motion.span>
               </Link>
             </motion.div>
 
@@ -141,7 +178,12 @@ export default function Header({}: HeaderProps) {
               transition={{ duration: 0, delay: isInView ? 0.4 : 0.2 }}
             >
               <Link href="/business" className={styles.link}>
-                For Businesses
+                <motion.span
+                  animate={{ color: calculateLinksColor() }}
+                  transition={{ duration: 0.5 }}
+                >
+                  For Businesses
+                </motion.span>
               </Link>
             </motion.div>
 
@@ -151,7 +193,12 @@ export default function Header({}: HeaderProps) {
               transition={{ duration: 0, delay: 0.3 }}
             >
               <Link href="/individuals" className={styles.link}>
-                For Individuals
+                <motion.span
+                  animate={{ color: calculateLinksColor() }}
+                  transition={{ duration: 0.5 }}
+                >
+                  For Individuals
+                </motion.span>
               </Link>
             </motion.div>
 
@@ -160,7 +207,12 @@ export default function Header({}: HeaderProps) {
               transition={{ duration: 0, delay: isInView ? 0.2 : 0.4 }}
             >
               <Link href="/capitalism" className={styles.link}>
-                Capitalism 2.0
+                <motion.span
+                  animate={{ color: calculateLinksColor() }}
+                  transition={{ duration: 0.5 }}
+                >
+                  Capitalism 2.0
+                </motion.span>
               </Link>
             </motion.div>
 
@@ -170,15 +222,23 @@ export default function Header({}: HeaderProps) {
               transition={{ duration: 0, delay: isInView ? 0.1 : 0.5 }}
             >
               <Link href="/marketing" className={styles.link}>
-                Marketing Efforts
+                <motion.span
+                  animate={{ color: calculateLinksColor() }}
+                  transition={{ duration: 0.6 }}
+                >
+                  Marketing Efforts
+                </motion.span>
               </Link>
             </motion.div>
           </nav>
 
           <motion.button
             className={clsx(styles.button, {
-              [styles.buttonReview]: colorCondition === true,
-              [styles.buttonGetStarted]: activeSection?.includes('getstarted'),
+              [styles.buttonLightAccent]:
+                activeSection?.includes('reviews') ||
+                activeSection?.includes('home-image') === true,
+              [styles.buttonDarkDark]: activeSection?.includes('getstarted'),
+              [styles.buttonHidden]: pathname === '/contact',
             })}
             variants={variantsButton}
             transition={{ duration: 0.4 }}

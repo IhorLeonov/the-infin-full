@@ -1,0 +1,100 @@
+@import '../../../variables';
+@import '../../../mixins';
+
+.hero {
+  padding-top: 191px;
+  padding-bottom: 30px;
+
+  color: $light;
+  background-color: $dark;
+}
+
+.smallText {
+  @include p4;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-top: 26px;
+}
+
+.title {
+  @include h2;
+
+  max-width: 587px;
+  color: $light;
+}
+
+.rightBlock {
+  display: flex;
+}
+
+.bigText {
+  max-width: 262px;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.accentText {
+  color: $accent;
+}
+
+.address {
+  display: flex;
+  margin-left: 84px;
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.addressKeys {
+  width: 79px;
+
+  letter-spacing: -0.12px;
+  opacity: 0.4;
+}
+
+.addressValues {
+  margin-left: 8px;
+  width: 146px;
+
+  text-align: right;
+}
+
+@media screen and (max-width: 1220px) {
+  .hero {
+    padding-top: 109px;
+  }
+
+  .wrapper {
+    display: block;
+  }
+
+  .rightBlock {
+    margin-top: 40px;
+  }
+
+  .address {
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: $maxMobile) {
+  .bigText {
+    max-width: 100%;
+  }
+  .rightBlock {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+  .address {
+    margin-left: 0;
+    margin-top: 30px;
+    justify-content: space-between;
+  }
+}
