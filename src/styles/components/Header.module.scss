@@ -1,0 +1,179 @@
+@import '../variables';
+@import '../mixins';
+
+.header {
+  position: fixed;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 1440px;
+  backdrop-filter: blur(3px);
+}
+
+.topBlock {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 30px 0 30px;
+}
+
+.logo svg {
+  max-width: 514px;
+  width: 100%;
+}
+
+.logo:hover svg {
+  fill: $light;
+}
+
+.nav {
+  @include p3;
+
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: repeat(1, auto);
+
+  padding-bottom: 6px;
+
+  & :nth-child(1),
+  & :nth-child(2),
+  & :nth-child(3),
+  & :nth-child(4),
+  & :nth-child(5) {
+    grid-column: 5;
+  }
+
+  & :nth-child(5) {
+    margin-right: 0 !important;
+  }
+}
+
+.link {
+  @include transition;
+
+  &:hover {
+    color: $light;
+  }
+}
+
+.button {
+  @include main-button;
+
+  background: none;
+  font-weight: 500;
+
+  color: $dark;
+  border: 1px solid rgba(18, 18, 18, 0.16);
+
+  &:hover,
+  &:focus {
+    background-color: $accent;
+    border-color: transparent;
+  }
+}
+
+.buttonReview {
+  color: $light;
+  border-color: $light;
+}
+
+.buttonGetStarted {
+  &:hover,
+  &:focus {
+    color: $light;
+    background-color: $dark;
+    border-color: transparent;
+  }
+}
+
+@media screen and (max-width: $maxTablet) {
+  .header {
+    height: 68px;
+  }
+
+  .topBlock {
+    padding: 16px 16px 0 16px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .button {
+    display: none !important;
+  }
+
+  .logo {
+    max-height: 39px;
+    height: 39px;
+  }
+
+  .logo svg {
+    width: 227px !important;
+  }
+}
+
+// mobile menu
+
+.mobileMenu {
+  position: relative;
+  z-index: -1;
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+
+  color: $light;
+  background-color: $dark;
+}
+
+.navMobileBox {
+  display: flex;
+}
+
+.navMobileTitle {
+  @include p4;
+  width: 113px;
+}
+
+.navMobile {
+  @include p1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  margin-left: 19px;
+  margin-right: 9px;
+}
+
+.buttonMobile {
+  margin-top: auto !important;
+
+  width: 100% !important;
+  height: 72px !important;
+  color: $light !important;
+}
+
+.plusIcon {
+  stroke: $light;
+  stroke-width: 2px;
+  opacity: 0.08;
+}
+
+.topPluses,
+.bottomPluses {
+  display: flex;
+  justify-content: space-between;
+}
+
+.topPluses {
+  margin-bottom: 48px;
+}
+
+.bottomPluses {
+  margin-bottom: 30px;
+}

@@ -1,0 +1,130 @@
+@import './variables';
+
+@mixin container {
+  padding: 0 12px;
+
+  @media screen and (max-width: 767px) {
+    padding: 0 10px;
+  }
+}
+
+// headings
+
+@mixin h1 {
+  font-size: 120px;
+  font-weight: 500;
+  line-height: 92%;
+  letter-spacing: -1.2px;
+  text-transform: uppercase;
+  color: $dark;
+
+  @media screen and (max-width: 767px) {
+    font-size: 76px;
+    letter-spacing: -1.52px;
+  }
+}
+
+@mixin h2 {
+  font-size: 88px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -0.88px;
+  text-transform: uppercase;
+  color: $dark;
+
+  @media screen and (max-width: 767px) {
+    font-size: 52px;
+    letter-spacing: -0.52px;
+  }
+}
+
+@mixin h3 {
+  font-size: 62px;
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: -0.62px;
+  color: $dark;
+
+  @media screen and (max-width: 767px) {
+    font-size: 42px;
+    letter-spacing: -0.42px;
+  }
+}
+
+@mixin h4 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 120%;
+  color: $dark;
+
+  @media screen and (max-width: 767px) {
+    font-size: 28px;
+  }
+}
+
+// paragraphs
+
+@mixin p1 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 120%;
+
+  @media screen and (max-width: 767px) {
+    font-size: 28px;
+  }
+}
+
+@mixin p2 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+@mixin p3 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+@mixin p4 {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 130%;
+  opacity: 0.4;
+}
+
+// buttons
+
+@mixin main-button {
+  padding: 12px;
+
+  width: 223px;
+  height: 90px;
+
+  text-align: center;
+  border: none;
+  border-radius: 129px;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+
+  transition: all 0.4s;
+}
+
+// transitions
+
+@mixin transition {
+  transition: all 0.4s;
+}
+
+// coursors
+
+@mixin cursor-default {
+  cursor: url('/icons/cursor.svg'), default;
+}
+
+@mixin cursor-pointer {
+  cursor: url('/icons/cursor-pointer.svg'), pointer;
+}

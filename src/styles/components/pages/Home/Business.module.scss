@@ -1,0 +1,39 @@
+@import '../../../variables';
+@import '../../../mixins';
+
+.section {
+  display: flex;
+  gap: 30px;
+
+  background-color: $light;
+}
+
+.box {
+  width: 100%;
+}
+
+.title {
+  @include h3;
+
+  margin-top: 36px;
+  max-width: 668px;
+}
+
+.imageWithButton {
+  max-width: 421px;
+}
+
+@media screen and (max-width: 1200px) {
+  .section {
+    flex-direction: column;
+  }
+  .box {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .imageWithButton {
+    max-width: 100%;
+  }
+}

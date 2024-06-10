@@ -1,0 +1,142 @@
+@import '../../../variables';
+@import '../../../mixins';
+
+.hero {
+  position: relative;
+  padding-top: calc(136px + 106px);
+  min-height: 100vh;
+
+  overflow-x: hidden;
+}
+
+.topBlock {
+  display: flex;
+}
+
+.imageContainer {
+  border-radius: 20px;
+
+  overflow: hidden;
+  width: 201px;
+}
+
+.image {
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.bottomBlock {
+  display: flex;
+  margin-top: 128px;
+}
+
+.titleBox {
+  position: relative;
+  display: inline-block;
+}
+
+.mainTitle {
+  @include h2;
+
+  max-width: 910px;
+  background-color: $grey;
+
+  &::selection {
+    background: $accent;
+  }
+  &::-moz-selection {
+    background: $accent;
+  }
+}
+
+.plusesGrid {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+
+  transform: translate(48%, -60%);
+}
+
+.smallText {
+  @include p4;
+
+  span {
+    display: block;
+    max-width: 56px;
+  }
+}
+
+.description {
+  @include p4;
+  display: inline-block;
+  opacity: 1;
+}
+
+.smallText,
+.description {
+  width: 113px;
+  margin-right: 25px;
+}
+
+.button {
+  margin-left: auto;
+  align-self: end;
+  width: 179px;
+}
+
+@media screen and (max-width: $maxTablet) {
+  .plusesGrid {
+    transform: translate(0%, -55%);
+  }
+
+  .hero {
+    padding-top: 109px;
+  }
+
+  .bottomBlock {
+    flex-direction: column;
+  }
+
+  .mainTitle {
+    margin-top: 16px;
+  }
+
+  .button {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: $maxMobile) {
+  .plusesGrid {
+    transform: translate(15%, -20%);
+  }
+
+  .mainTitle {
+    max-width: 530px;
+  }
+
+  .smallText {
+    margin-right: 19px;
+  }
+
+  .imageContainer {
+    width: 100%;
+  }
+
+  .description {
+    width: 93px;
+    margin-right: 0;
+  }
+
+  .button {
+    width: 211px;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  .plusesGrid {
+    transform: translate(17%, -30%);
+  }
+}

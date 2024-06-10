@@ -1,0 +1,25 @@
+.wrapper {
+  position: relative;
+
+  // width: 421px;
+  // height: 636px;
+  width: 100%;
+  height: auto;
+
+  border-radius: 20px;
+  overflow: hidden;
+
+  & .button {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+
+    width: calc(100% - 24px);
+  }
+}
+
+.image {
+  border-radius: 20px;
+  width: 100% !important;
+  height: auto !important;
+}
