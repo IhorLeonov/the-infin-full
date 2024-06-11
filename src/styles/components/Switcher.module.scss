@@ -1,0 +1,33 @@
+@import '../mixins';
+@import '../variables';
+
+.switcher {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 3px;
+
+  width: 326px;
+  height: 68px;
+
+  border-radius: 129px;
+  background-color: rgba(18, 18, 18, 0.06);
+}
+
+.leftButton,
+.rightButton {
+  border-radius: 129px;
+
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+
+  color: $dark;
+  background-color: transparent;
+}
+
+@media screen and (max-width: $maxMobile) {
+  .switcher {
+    width: 100%;
+  }
+}

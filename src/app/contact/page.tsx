@@ -11,11 +11,11 @@ export default async function ContactPage({}: ContactPageProps) {
     <div className={styles.page}>
       <main className={styles.main}>
         <Hero />
+        <Contact />
         <LargeImage
           mobileImage="/images/handphone-mobile.png"
           desctopImage="/images/handphone-desktop.png"
         />
-        <Contact />
       </main>
 
       <BottomComponent className={styles.bottomComponent} />

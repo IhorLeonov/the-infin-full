@@ -1,0 +1,23 @@
+@import '../../../variables';
+@import '../../../mixins';
+
+.description {
+  padding-bottom: 50px;
+}
+
+.title {
+  @include h3;
+
+  margin-top: 148px;
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: $maxTablet) {
+  .description {
+    padding-bottom: 0;
+  }
+
+  .title {
+    margin-top: 40px;
+  }
+}
