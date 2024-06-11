@@ -1,4 +1,4 @@
-import styles from '../../styles/components/Divider.module.scss';
+import styles from '../../styles/components/atoms/Divider.module.scss';
 import clsx from 'clsx';
 
 import { DetailedHTMLProps, HTMLAttributes } from 'react';

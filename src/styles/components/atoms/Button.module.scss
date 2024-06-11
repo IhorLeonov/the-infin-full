@@ -1,8 +1,17 @@
-@import '../variables';
-@import '../mixins';
+@import '../../variables';
+@import '../../mixins';
 
 .button {
   @include main-button;
+}
+
+.button:disabled,
+.button:disabled:hover {
+  @include cursor-default;
+
+  color: $light;
+  background-color: #e0e0e0;
+  border-color: transparent;
 }
 
 .primary {

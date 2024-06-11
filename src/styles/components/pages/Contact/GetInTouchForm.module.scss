@@ -1,0 +1,54 @@
+@import '../../../variables';
+@import '../../../mixins';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 26px;
+  width: 100%;
+  max-width: 488px;
+}
+
+.nameBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 12px;
+}
+
+.labelAccent {
+  color: $red;
+}
+
+.input,
+.textarea {
+  margin-top: 10px;
+}
+
+.submitBtn {
+  margin-top: 14px;
+}
+
+@media screen and (max-width: $maxMobile) {
+  .form {
+    gap: 24px;
+    max-width: 100%;
+  }
+
+  .nameBox {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .submitBtn {
+    margin-top: 24px;
+    width: 100%;
+  }
+}

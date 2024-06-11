@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import clsx from "clsx";
-import styles from "../../styles/components/Button.module.scss";
+import clsx from 'clsx';
+import styles from '../../styles/components/atoms/Button.module.scss';
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  appearance: "primary" | "ghost" | "light";
+  appearance: 'primary' | 'ghost' | 'light';
 }
 
 export const Button = ({
@@ -20,11 +20,11 @@ export const Button = ({
       className={clsx(
         styles.button,
         {
-          [styles.primary]: appearance === "primary",
-          [styles.ghost]: appearance === "ghost",
-          [styles.light]: appearance === "light",
+          [styles.primary]: appearance === 'primary',
+          [styles.ghost]: appearance === 'ghost',
+          [styles.light]: appearance === 'light',
         },
-        className
+        className,
       )}
       {...props}
     >

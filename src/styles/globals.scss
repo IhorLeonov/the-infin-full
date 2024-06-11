@@ -40,4 +40,5 @@ li {
 button {
   @include cursor-pointer;
   border: none;
+  font-family: inherit;
 }

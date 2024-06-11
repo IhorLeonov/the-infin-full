@@ -6,7 +6,7 @@ import React, {
   useEffect,
   useState,
 } from 'react';
-import styles from '../../styles/components/Cursor.module.scss';
+import styles from '../../styles/components/atoms/Cursor.module.scss';
 import clsx from 'clsx';
 import PlusesGrid from './PlusesGrid';
 

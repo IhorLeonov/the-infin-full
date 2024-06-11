@@ -1,12 +1,12 @@
-import { DetailedHTMLProps, HTMLAttributes, ReactNode } from "react";
+import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
 
-import styles from "../../styles/components/Section.module.scss";
-import clsx from "clsx";
+import styles from '../../styles/components/atoms/Section.module.scss';
+import clsx from 'clsx';
 
 interface SectionProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   children: ReactNode;
-  type: "filled" | "ghost";
+  type: 'filled' | 'ghost';
   numb?: string;
   shortTitle?: string;
 }
@@ -24,10 +24,10 @@ export const Section = ({
       className={clsx(
         styles.section,
         {
-          [styles.filled]: type === "filled",
-          [styles.ghost]: type === "ghost",
+          [styles.filled]: type === 'filled',
+          [styles.ghost]: type === 'ghost',
         },
-        className
+        className,
       )}
       {...props}
     >

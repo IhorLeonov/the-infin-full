@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../styles/components/LogoIcon.module.scss';
+import styles from '../../styles/components/atoms/LogoIcon.module.scss';
 import clsx from 'clsx';
 
 interface LogoProps {

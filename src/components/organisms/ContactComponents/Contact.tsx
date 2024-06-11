@@ -9,6 +9,8 @@ import ScheduleDemo from './ScheduleDemo';
 import GetInTouch from './GetInTouch';
 import Switcher from '@/components/molecules/Switcher';
 import PlusIcon from '../../../../public/icons/plus.svg';
+import ScheduleDemoForm from './ScheduleDemoForm';
+import GetInTouchForm from './GetInTouchForm';
 
 interface ContactProps {}
 
@@ -42,12 +44,17 @@ export default function Contact({}: ContactProps) {
           <PlusIcon className={styles.secondPlus} />
         </div>
 
-        <div className={styles.formBox}>
-          <div>
+        <div className={styles.formContainer}>
+          <div className={styles.formBox}>
             <p className={styles.formTitle}>
               {isActiveSection === 'left' ? 'Schedule a demo' : 'Get in touch'}
             </p>
-            <form className={styles.form}></form>
+
+            {isActiveSection === 'left' ? (
+              <ScheduleDemoForm id="#schedule-demo" className={styles.form} />
+            ) : (
+              <GetInTouchForm id="#get-in-touch" className={styles.form} />
+            )}
           </div>
         </div>
       </div>

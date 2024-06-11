@@ -3,6 +3,7 @@
 
 .description {
   padding-bottom: 50px;
+  padding-right: 14px;
 }
 
 .title {
@@ -15,6 +16,7 @@
 @media screen and (max-width: $maxTablet) {
   .description {
     padding-bottom: 0;
+    padding-right: 0;
   }
 
   .title {
