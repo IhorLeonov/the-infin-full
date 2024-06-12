@@ -32,6 +32,7 @@
 }
 
 .containerClass {
+  margin-top: 10px !important;
   display: flex;
   gap: 12px;
 }
@@ -39,7 +40,6 @@
 .inputClass {
   position: static !important;
   padding: 13px 16px !important;
-  margin-top: 10px !important;
   order: 2;
 
   width: 100% !important;
