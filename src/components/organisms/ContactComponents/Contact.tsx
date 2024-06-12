@@ -51,9 +51,9 @@ export default function Contact({}: ContactProps) {
             </p>
 
             {isActiveSection === 'left' ? (
-              <ScheduleDemoForm id="#schedule-demo" className={styles.form} />
+              <ScheduleDemoForm id="#schedule" className={styles.form} />
             ) : (
-              <GetInTouchForm id="#get-in-touch" className={styles.form} />
+              <GetInTouchForm id="#getintouch" className={styles.form} />
             )}
           </div>
         </div>

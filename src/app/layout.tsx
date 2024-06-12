@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+
 import '../styles/globals.scss';
+import '../styles/main.css';
+
+import 'react-phone-input-2/lib/style.css';
 
 import { AppContextProvider } from '@/context/app.context';
 import ClientLayout from '@/components/ClientLayout';

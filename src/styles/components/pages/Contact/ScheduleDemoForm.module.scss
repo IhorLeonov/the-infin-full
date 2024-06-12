@@ -11,7 +11,7 @@
   max-width: 488px;
 }
 
-.nameBox {
+.labelBox {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
@@ -31,6 +31,18 @@
   margin-top: 10px;
 }
 
+.containerClass {
+}
+
+.dropdownClass {
+  // z-index: 1000 !important;
+}
+
+.phoneInput {
+  display: flex;
+  height: 48px;
+}
+
 .submitBtn {
   margin-top: 14px;
 }
@@ -41,7 +53,7 @@
     max-width: 100%;
   }
 
-  .nameBox {
+  .labelBox {
     grid-template-columns: 1fr;
     gap: 24px;
   }

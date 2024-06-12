@@ -11,7 +11,7 @@ export interface InputProps
     HTMLInputElement
   > {
   error?: FieldError;
-  placeholder: string;
+  placeholder?: string;
 }
 
 const InputComponent = (

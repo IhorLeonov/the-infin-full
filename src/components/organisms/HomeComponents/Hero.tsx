@@ -9,10 +9,13 @@ import AnimatedText from '../../molecules/AnimatedText';
 import { Section } from '../../atoms/Section';
 import { Button } from '../../atoms/Button';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
 interface HeroProps {}
 
 export default function Hero({}: HeroProps) {
+  const router = useRouter();
+
   return (
     <Section id="home" className={styles.hero} type="ghost">
       <div className={styles.topBlock}>
@@ -51,19 +54,21 @@ export default function Hero({}: HeroProps) {
             To know your true value, Help others understand theirs.
           </h2>
 
-          {
-            <motion.div
-              className={styles.plusesGrid}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 3, delay: 1 }}
-            >
-              <PlusesGrid />
-            </motion.div>
-          }
+          <motion.div
+            className={styles.plusesGrid}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 3, delay: 1 }}
+          >
+            <PlusesGrid />
+          </motion.div>
         </motion.div>
 
-        <Button className={styles.button} appearance="primary">
+        <Button
+          className={styles.button}
+          appearance="primary"
+          onClick={() => router.push('/contact', { scroll: false })}
+        >
           Schedule a demo
         </Button>
       </div>

@@ -4,9 +4,13 @@ import React, { DetailedHTMLProps, HTMLAttributes, useState } from 'react';
 import styles from '../../../styles/components/pages/Contact/ScheduleDemoForm.module.scss';
 import clsx from 'clsx';
 
-import { useForm } from 'react-hook-form';
+import PhoneInput from 'react-phone-input-2';
+
+import { Controller, useForm } from 'react-hook-form';
 import { Input } from '@/components/atoms/Input';
 import { Button } from '@/components/atoms/Button';
+import { title } from 'process';
+import { relative } from 'path';
 
 interface ScheduleDemoFormProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLFormElement>, HTMLFormElement> {
@@ -49,12 +53,12 @@ export default function ScheduleDemoForm({
       className={clsx(styles.form, className)}
       {...props}
     >
-      <div className={styles.nameBox}>
+      <div className={styles.labelBox}>
         <label className={styles.label}>
           First name <span className={styles.labelAccent}>*</span>
           <Input
             {...register('firstName', {
-              required: { value: true, message: '' },
+              required: true,
             })}
             className={styles.input}
             placeholder="Enter your first name"
@@ -66,7 +70,7 @@ export default function ScheduleDemoForm({
           Last name <span className={styles.labelAccent}>*</span>
           <Input
             {...register('lastName', {
-              required: { value: true, message: '' },
+              required: true,
             })}
             placeholder="Enter your last name"
             className={styles.input}
@@ -79,7 +83,7 @@ export default function ScheduleDemoForm({
         Business email <span className={styles.labelAccent}>*</span>
         <Input
           {...register('email', {
-            required: { value: true, message: '' },
+            required: true,
           })}
           placeholder="Enter your business email"
           className={styles.input}
@@ -89,13 +93,32 @@ export default function ScheduleDemoForm({
 
       <label className={styles.label}>
         Phone number <span className={styles.labelAccent}>*</span>
-        <Input
+        {/* <Input
           {...register('phone', {
-            required: { value: true, message: '' },
+            required: true,
           })}
           placeholder="Enter phone number"
           className={styles.input}
           error={errors.phone}
+        /> */}
+        <Controller
+          control={control}
+          name="phone"
+          rules={{ required: true }}
+          render={({ field: { ...field } }) => (
+            <PhoneInput
+              {...field}
+              inputProps={{
+                name: 'phone',
+                required: true,
+              }}
+              specialLabel={''}
+              countryCodeEditable={false}
+              placeholder="Enter phone number"
+              containerClass={styles.containerClass}
+              dropdownClass={styles.dropdownClass}
+            />
+          )}
         />
       </label>
 
@@ -103,7 +126,7 @@ export default function ScheduleDemoForm({
         Job Title <span className={styles.labelAccent}>*</span>
         <Input
           {...register('jobTitle', {
-            required: { value: true, message: '' },
+            required: true,
           })}
           placeholder="Enter your current job title"
           className={styles.input}
@@ -111,17 +134,30 @@ export default function ScheduleDemoForm({
         />
       </label>
 
-      <label className={styles.label}>
-        Company name <span className={styles.labelAccent}>*</span>
-        <Input
-          {...register('company', {
-            required: { value: true, message: '' },
-          })}
-          placeholder="Enter the name of company"
-          className={styles.input}
-          error={errors.company}
-        />
-      </label>
+      <div className={styles.labelBox}>
+        <label className={styles.label}>
+          Company name <span className={styles.labelAccent}>*</span>
+          <Input
+            {...register('company', {
+              required: true,
+            })}
+            placeholder="Enter the name of company"
+            className={styles.input}
+            error={errors.company}
+          />
+        </label>
+
+        <label className={styles.label}>
+          Employees <span className={styles.labelAccent}>*</span>
+          <Input
+            {...register('employees', {
+              required: true,
+            })}
+            className={styles.input}
+            error={errors.employees}
+          />
+        </label>
+      </div>
 
       <Button
         appearance="primary"
