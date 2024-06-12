@@ -2,6 +2,7 @@
 
 import React from 'react';
 import styles from '../../../styles/components/pages/Home/Hero.module.scss';
+
 import Image from 'next/image';
 import PlusesGrid from '../../atoms/PlusesGrid';
 import AnimatedText from '../../molecules/AnimatedText';

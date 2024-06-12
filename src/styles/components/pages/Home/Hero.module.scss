@@ -39,6 +39,8 @@
 
 .mainTitle {
   @include h2;
+  position: relative;
+  z-index: 2;
 
   max-width: 910px;
   background-color: $grey;
@@ -53,7 +55,7 @@
 
 .plusesGrid {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   top: 0;
   right: 0;
 
@@ -73,6 +75,8 @@
   @include p4;
   display: inline-block;
   opacity: 1;
+  position: relative;
+  z-index: 2;
 }
 
 .smallText,

@@ -21,12 +21,13 @@ import Link from 'next/link';
 interface HeaderProps {}
 
 export default function Header({}: HeaderProps) {
+  const { light, dark, accent } = colors;
+
   const router = useRouter();
   const pathname = usePathname();
   const targetRef = useRef(null);
 
   const { isInView } = useTargetInView(targetRef);
-  const { light, dark, accent } = colors;
   const { activeSection } = useContext(AppContext) as IAppContext;
   const { isTablet } = useCheckIsMobile();
 

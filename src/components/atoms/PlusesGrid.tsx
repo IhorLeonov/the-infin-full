@@ -1,5 +1,5 @@
 import React, { DetailedHTMLProps, HTMLAttributes } from 'react';
-import styles from '../../styles/components/atoms/Section.module.scss';
+import styles from '../../styles/components/atoms/PlusesGrid.module.scss';
 import clsx from 'clsx';
 
 import PlusIcon from '../../../public/icons/plus.svg';
