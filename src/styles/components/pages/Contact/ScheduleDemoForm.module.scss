@@ -32,11 +32,58 @@
 }
 
 .containerClass {
+  display: flex;
+  gap: 12px;
 }
 
-.dropdownClass {
-  // z-index: 1000 !important;
+.inputClass {
+  position: static !important;
+  padding: 13px 16px !important;
+  margin-top: 10px !important;
+  order: 2;
+
+  width: 100% !important;
+  height: 48px !important;
+  border-radius: 6px !important;
+
+  background-color: $lightGrey !important;
+  border-color: transparent !important;
+  font-family: inherit !important;
 }
+
+.buttonClass {
+  position: static !important;
+  padding: 13px 16px !important;
+
+  height: 48px !important;
+  width: 123px !important;
+  border-radius: 6px !important;
+
+  background-color: $lightGrey !important;
+  border-color: transparent !important;
+  font-family: inherit !important;
+}
+
+// .buttonClass :first-child {
+// padding: 0 !important;
+// }
+
+// .buttonClass :first-child div {
+// position: static !important;
+// width: 29px !important;
+// height: 14px !important;
+// height: 14px;
+// }
+
+.inputClass::placeholder {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 22px !important;
+  color: $grey !important;
+}
+
+// .dropdownClass {
+// }
 
 .phoneInput {
   display: flex;

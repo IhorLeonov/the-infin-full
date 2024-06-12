@@ -152,7 +152,11 @@ export default function Header({}: HeaderProps) {
             variants={variantsLogo}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            <Logo className={styles.logo} fill={calculateLogoColor()} />
+            <Logo
+              className={styles.logo}
+              fill={calculateLogoColor()}
+              onClick={() => router.push('/')}
+            />
           </motion.div>
 
           <nav className={styles.nav}>

@@ -9,8 +9,6 @@ import PhoneInput from 'react-phone-input-2';
 import { Controller, useForm } from 'react-hook-form';
 import { Input } from '@/components/atoms/Input';
 import { Button } from '@/components/atoms/Button';
-import { title } from 'process';
-import { relative } from 'path';
 
 interface ScheduleDemoFormProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLFormElement>, HTMLFormElement> {
@@ -93,14 +91,6 @@ export default function ScheduleDemoForm({
 
       <label className={styles.label}>
         Phone number <span className={styles.labelAccent}>*</span>
-        {/* <Input
-          {...register('phone', {
-            required: true,
-          })}
-          placeholder="Enter phone number"
-          className={styles.input}
-          error={errors.phone}
-        /> */}
         <Controller
           control={control}
           name="phone"
@@ -116,6 +106,8 @@ export default function ScheduleDemoForm({
               countryCodeEditable={false}
               placeholder="Enter phone number"
               containerClass={styles.containerClass}
+              inputClass={styles.inputClass}
+              buttonClass={styles.buttonClass}
               dropdownClass={styles.dropdownClass}
             />
           )}
