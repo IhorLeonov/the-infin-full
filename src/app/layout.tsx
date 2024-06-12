@@ -7,6 +7,11 @@ import 'react-phone-input-2/lib/style.css';
 import { AppContextProvider } from '@/context/app.context';
 import ClientLayout from '@/components/ClientLayout';
 
+export const metadata: Metadata = {
+  title: 'The Infin',
+  description: 'The official landing page, built with Next.js',
+};
+
 const neueHaasGrotesk = localFont({
   src: [
     {
@@ -23,11 +28,6 @@ const neueHaasGrotesk = localFont({
   display: 'swap',
   variable: '--font-neue-haas-grotesk',
 });
-
-export const metadata: Metadata = {
-  title: 'The Infin',
-  description: 'The official landing page, built with Next.js',
-};
 
 export default function RootLayout({
   children,
