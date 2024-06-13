@@ -29,7 +29,7 @@ export default function LargeImage({
   mobileImage,
   desctopImage,
   alt,
-  scale = true,
+  scale,
 }: LargeImageProps) {
   const { isMobile } = useCheckIsMobile();
   const { setActiveSection, removeActiveSection } = useContext(

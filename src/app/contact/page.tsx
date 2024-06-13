@@ -15,6 +15,8 @@ export default async function ContactPage({}: ContactPageProps) {
         <LargeImage
           mobileImage="/images/handphone-mobile.png"
           desctopImage="/images/handphone-desktop.png"
+          alt="hand with phone"
+          scale
         />
       </main>
 
