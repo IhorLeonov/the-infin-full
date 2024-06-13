@@ -22,7 +22,7 @@ export default function ClientLayout({ children }: ClientLayotProps) {
   const backgroundColor = () => {
     switch (pathname) {
       case '/business':
-        return light;
+        return '#E8E8E8';
       case '/individuals':
         return '#E8E8E8';
       case '/contact':

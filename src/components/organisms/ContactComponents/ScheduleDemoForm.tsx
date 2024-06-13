@@ -145,6 +145,7 @@ export default function ScheduleDemoForm({
             {...register('employees', {
               required: true,
             })}
+            placeholder="51 - 100"
             className={styles.input}
             error={errors.employees}
           />

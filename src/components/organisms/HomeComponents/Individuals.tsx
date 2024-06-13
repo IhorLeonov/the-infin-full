@@ -30,6 +30,7 @@ export default function Individuals({ className }: IndividualsProps) {
         <CardTitle
           className={styles.cardTitle}
           showTitle={false}
+          showNumber={true}
           cardNumber="02"
           cardTitle="INDIVIDUALS"
         />

@@ -1,0 +1,25 @@
+@import '../../../mixins';
+@import '../../../variables';
+
+.discoverImage {
+  position: relative;
+}
+
+.playButton {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: $maxMobile) {
+  .imageContainer {
+    height: 638px !important;
+  }
+
+  .image {
+    object-fit: cover !important;
+    height: 100% !important;
+  }
+}

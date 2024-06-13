@@ -8,20 +8,22 @@ export interface CardTitleProps
     HTMLHeadingElement
   > {
   cardNumber: string;
-  cardTitle: string;
+  cardTitle?: string;
   showTitle: boolean;
+  showNumber: boolean;
 }
 
 export const CardTitle = ({
   cardNumber,
   cardTitle,
   showTitle,
+  showNumber,
   className,
   ...props
 }: CardTitleProps): JSX.Element => {
   return (
     <h3 className={clsx(styles.title, className)} {...props}>
-      <span className={styles.numb}>{cardNumber}</span>
+      {showNumber && <span className={styles.numb}>{cardNumber}</span>}
       {showTitle && <span className={styles.shortTitle}>{cardTitle}</span>}
     </h3>
   );

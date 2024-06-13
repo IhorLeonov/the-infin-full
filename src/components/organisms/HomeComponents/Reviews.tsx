@@ -47,6 +47,7 @@ export default function Reviews({ className }: ReviewsProps) {
         <CardTitle
           className={styles.cardTitle}
           showTitle={false}
+          showNumber={true}
           cardNumber="03"
           cardTitle="Reviews"
         />

@@ -1,7 +1,28 @@
 @import '../../../mixins';
 @import '../../../variables';
 
-.main {
-  padding-top: 100px;
-  padding-left: 18px;
+.topBlock {
+  @include container;
+
+  padding-bottom: 12px;
+  border-radius: 0px 0px 36px 36px;
+  background-color: $light;
+}
+
+.bottomBlock {
+  @include container;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media screen and (max-width: $maxMobile) {
+  .topBlock {
+    padding-bottom: 10px;
+  }
+
+  .bottomBlock {
+    gap: 10px;
+  }
 }

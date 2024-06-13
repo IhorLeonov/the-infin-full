@@ -19,6 +19,8 @@ export default async function HomePage({}: HomePageProps) {
           sectionName="home-image"
           mobileImage="/images/presentation-mobile.png"
           desctopImage="/images/presentation.png"
+          alt="presentation"
+          scale
         />
         <WhyChoose />
 

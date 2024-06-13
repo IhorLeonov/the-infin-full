@@ -17,4 +17,5 @@ export type TypeActiveSection =
   | 'reviews'
   | 'getstarted'
   | 'undefined'
-  | 'home-image';
+  | 'home-image'
+  | 'discover-image';

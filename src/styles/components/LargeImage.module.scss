@@ -2,16 +2,22 @@
 
 .wrapper {
   position: relative;
-
   border-radius: 30px;
   overflow: hidden;
 }
 
 .imageContainer {
   width: 100%;
+  height: auto;
 }
 
 .image {
   width: 100%;
   height: auto;
+}
+
+@media screen and (max-width: $maxMobile) {
+  .wrapper {
+    border-radius: 20px;
+  }
 }

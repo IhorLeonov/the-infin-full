@@ -53,7 +53,8 @@ export default function GetStarted({ className }: GetStartedProps) {
       <CardTitle
         className={styles.cardTitle}
         showTitle={false}
-        cardNumber="03"
+        showNumber={true}
+        cardNumber="04"
         cardTitle="Get started"
       />
 

@@ -2,28 +2,34 @@
 
 import React, { useContext, useEffect, useRef } from 'react';
 import styles from '../../styles/components/LargeImage.module.scss';
+import clsx from 'clsx';
 
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { AppContext, IAppContext } from '@/context/app.context';
+import { TypeActiveSection } from '@/lib/types';
 
 import Image from 'next/image';
 import useTargetInView from '@/hooks/useTargetInView';
 import useCheckIsMobile from '@/hooks/useCheckIsMobile';
-import { TypeActiveSection } from '@/lib/types';
-import clsx from 'clsx';
 
 interface LargeImageProps {
   className?: string;
+  classNameImage?: string;
   sectionName?: TypeActiveSection;
   mobileImage: string;
   desctopImage: string;
+  alt: string;
+  scale: boolean;
 }
 
 export default function LargeImage({
   className,
+  classNameImage,
   sectionName,
   mobileImage,
   desctopImage,
+  alt,
+  scale = true,
 }: LargeImageProps) {
   const { isMobile } = useCheckIsMobile();
   const { setActiveSection, removeActiveSection } = useContext(
@@ -40,7 +46,7 @@ export default function LargeImage({
     offset: ['start end', 'end start'],
   });
 
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.25]);
+  const scaleAnimation = useTransform(scrollYProgress, [0, 1], [1, 1.25]);
 
   useEffect(() => {
     if (sectionName) {
@@ -53,27 +59,30 @@ export default function LargeImage({
   }, [isInView]);
 
   return (
-    <div className={clsx(styles.wrapper, className)} ref={containerRef}>
+    <div className={clsx(styles.wrapper)} ref={containerRef}>
       <div ref={targetRef} />
-      <motion.div style={{ scale }} className={styles.imageContainer}>
+      <motion.div
+        style={{ scale: scale ? scaleAnimation : 1 }}
+        className={clsx(styles.imageContainer, className)}
+      >
         {isMobile ? (
           <Image
-            className={styles.image}
+            className={clsx(styles.image, classNameImage)}
             src={mobileImage}
-            alt="presentation"
+            alt={alt}
+            width={355}
+            height={640}
             quality={100}
-            width={1416}
-            height={720}
             priority
           />
         ) : (
           <Image
-            className={styles.image}
+            className={clsx(styles.image, classNameImage)}
             src={desctopImage}
-            alt="presentation"
+            alt={alt}
             quality={100}
-            width={355}
-            height={640}
+            width={1416}
+            height={720}
             priority
           />
         )}

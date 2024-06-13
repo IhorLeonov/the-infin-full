@@ -9,6 +9,10 @@
   margin: 0;
 }
 
+html {
+  min-height: 100dvh;
+}
+
 body {
   @include p2;
   @include cursor-default;

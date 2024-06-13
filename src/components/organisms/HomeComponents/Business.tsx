@@ -38,9 +38,8 @@ export default function Business({ className }: BusinessProps) {
       <div className={styles.box} ref={target}>
         <CardTitle
           className={styles.cardTitle}
-          showTitle={false}
+          showNumber={true}
           cardNumber="01"
-          cardTitle="Business"
         />
 
         <AnimatedLineText
