@@ -39,6 +39,7 @@ export default function Business({ className }: BusinessProps) {
         <CardTitle
           className={styles.cardTitle}
           showNumber={true}
+          showTitle={false}
           cardNumber="01"
         />
 
