@@ -2,7 +2,7 @@ import styles from '../../styles/components/pages/Business/BusinessPage.module.s
 
 import LargeHero from '@/components/organisms/LargeHero';
 import BottomComponent from '@/components/BottomComponent';
-import Benefits from '@/components/organisms/Benefits';
+import Benefits from '@/components/organisms/BusinessComponents/Benefits';
 import Discover from '@/components/organisms/BusinessComponents/Discover';
 import DiscoverImage from '@/components/organisms/BusinessComponents/DiscoverImage';
 import Directing from '@/components/organisms/BusinessComponents/Directing';

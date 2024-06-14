@@ -1,0 +1,86 @@
+@import '../../../mixins';
+@import '../../../variables';
+
+.howWorks {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: $light;
+}
+
+.topBlock {
+  display: grid;
+  grid-template-columns: 131px 1fr;
+}
+
+.smallText {
+  @include p4;
+}
+
+.title {
+  @include h3;
+  text-align: center;
+
+  br {
+    display: none;
+  }
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 255px;
+
+  & :first-child div {
+    color: $accent;
+    border-bottom: 1px solid $dark;
+  }
+
+  & :first-child p {
+    opacity: 1;
+  }
+}
+
+.listItem {
+  max-width: 286px;
+}
+
+.listItemNumber {
+  font-size: 88px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -0.88px;
+  text-transform: uppercase;
+
+  padding-bottom: 10px;
+}
+
+.listItemText {
+  padding-top: 24px;
+  opacity: 0.4;
+}
+
+@media screen and (max-width: $maxTablet) {
+  .topBlock {
+    grid-template-columns: 1fr;
+  }
+  .title {
+    margin-top: 30px;
+    text-align: left;
+  }
+
+  .list {
+    margin-top: 60px;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 48px;
+  }
+
+  .listItemNumber {
+    padding-bottom: 16px;
+  }
+
+  .listItem {
+    max-width: 100%;
+  }
+}

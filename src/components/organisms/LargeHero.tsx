@@ -48,8 +48,7 @@ export default function LargeHero({
             <p className={styles.text}>{text}</p>
 
             <h2 className={styles.title}>
-              <span>{titleFirstRow}</span>
-              <br className={styles.titleBr} />
+              <span>{titleFirstRow}</span> <br className={styles.titleBr} />
               <span>{titleSecondRow}</span>
             </h2>
           </div>
@@ -81,7 +80,7 @@ export default function LargeHero({
       </div>
 
       <p className={styles.bottomText}>
-        <span className={styles.bottomTextAccent}>{bottomTextAccent}</span>
+        <span className={styles.bottomTextAccent}>{bottomTextAccent}</span>{' '}
         {bottomTextFirst}
         <br />
         <br />

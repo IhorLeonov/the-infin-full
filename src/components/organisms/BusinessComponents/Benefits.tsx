@@ -1,12 +1,13 @@
 'use client';
 
 import React from 'react';
-import styles from '../../styles/components/Benefits.module.scss';
-import PlusesIcon from '../../../public/icons/benefits-pluses.svg';
-import PlusesIconMobile from '../../../public/icons/benefits-pluses-mobile.svg';
+import styles from '../../../styles/components/pages/Business/Benefits.module.scss';
 
-import { Section } from '../atoms/Section';
-import { CardTitle } from '../molecules/CardTitle';
+import PlusesIcon from '../../../../public/icons/benefits-pluses.svg';
+import PlusesIconMobile from '../../../../public/icons/benefits-pluses-mobile.svg';
+
+import { Section } from '../../atoms/Section';
+import { CardTitle } from '../../molecules/CardTitle';
 import useCheckIsMobile from '@/hooks/useCheckIsMobile';
 
 interface BenefitsProps {}

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import styles from '../../../styles/components/pages/Business/Directing.module.scss';
+import styles from '../../../styles/components/pages/Individuals/Directing.module.scss';
 
 import { Section } from '@/components/atoms/Section';
 
@@ -20,7 +20,7 @@ export default function Directing({}: DirectingProps) {
       <div className={styles.imageBox}>
         <Image
           className={styles.image}
-          src="/images/directing-business.png"
+          src="/images/directing-individuals.png"
           width={537}
           height={687}
           alt="Boys are working with laptops"
@@ -33,8 +33,11 @@ export default function Directing({}: DirectingProps) {
         </p>
 
         <h3 className={styles.title}>
-          Using The <span className={styles.titleAccent}>INFIN gives</span> you
-          access to the data most leaders dream about.
+          <span className={styles.titleAccent}>It’s time for you</span> to be
+          seen, appreciated, and rewarded for your contributions.
+          <br />
+          <br />
+          And if not, you can take your profile to someplace that will.
         </h3>
 
         <Button

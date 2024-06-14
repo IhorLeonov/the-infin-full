@@ -1,6 +1,9 @@
 import LargeHero from '@/components/organisms/LargeHero';
 import styles from '../../styles/components/pages/Individuals/IndividualsPage.module.scss';
 import BottomComponent from '@/components/BottomComponent';
+import HowWorks from '@/components/organisms/IndividualsComponents/HowWorks';
+import Benefits from '@/components/organisms/IndividualsComponents/Benefits';
+import Directing from '@/components/organisms/IndividualsComponents/Directing';
 
 interface IndividualsPageProps {}
 
@@ -20,6 +23,9 @@ export default async function IndividualsPage({}: IndividualsPageProps) {
           imageSrc="/images/individuals-hero.png"
           imageAlt="man portrait"
         />
+        <HowWorks />
+        <Benefits />
+        <Directing />
       </main>
 
       <BottomComponent />
