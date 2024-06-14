@@ -13,10 +13,12 @@ import useTargetInView from '@/hooks/useTargetInView';
 import ImageWithButton from '../../molecules/ImageWithButton';
 import AnimatedLineText from '../../molecules/AnimatedLineText';
 import CardDescription from '@/components/molecules/CardDescription';
+import { useRouter } from 'next/navigation';
 
 interface BusinessProps extends CardProps {}
 
 export default function Business({ className }: BusinessProps) {
+  const router = useRouter();
   const { setActiveSection, removeActiveSection } = useContext(
     AppContext,
   ) as IAppContext;
@@ -71,6 +73,7 @@ export default function Business({ className }: BusinessProps) {
         imageSrc="/images/business.png"
         imageAlt="girl and boy with laptop"
         btnText="THE INFIN FOR BUSINESS"
+        onClick={() => router.push('/business')}
       />
     </Section>
   );

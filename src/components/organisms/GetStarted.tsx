@@ -21,6 +21,7 @@ import useTargetInView from '@/hooks/useTargetInView';
 import AnimatedLineText from '../molecules/AnimatedLineText';
 import AnimatedText from '../molecules/AnimatedText';
 import useCheckIsMobile from '@/hooks/useCheckIsMobile';
+import { useRouter } from 'next/navigation';
 
 interface GetStartedProps extends CardProps {}
 
@@ -29,6 +30,7 @@ export default function GetStarted({ className }: GetStartedProps) {
     AppContext,
   ) as IAppContext;
   const { isMobile } = useCheckIsMobile();
+  const router = useRouter();
 
   const targetMiddle = useRef(null);
   const targetBottom = useRef(null);
@@ -73,7 +75,11 @@ export default function GetStarted({ className }: GetStartedProps) {
         />
       </div>
 
-      <Button className={styles.button} appearance="primary">
+      <Button
+        className={styles.button}
+        appearance="primary"
+        onClick={() => router.push('/contact')}
+      >
         Schedule a live demo
       </Button>
 

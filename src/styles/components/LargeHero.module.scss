@@ -1,7 +1,8 @@
-@import '../../../mixins';
-@import '../../../variables';
+@import '../mixins';
+@import '../variables';
 
 .hero {
+  position: relative;
   padding-top: 190px;
   padding-bottom: 160px;
 }
@@ -39,14 +40,35 @@
 }
 
 .imageContainer {
+  position: relative;
   width: 61.7%;
 }
 
 .image {
-  border-radius: 20px;
-
   width: 100%;
   height: auto;
+  border-radius: 6%;
+  // border-radius: 20px;
+}
+
+.imageText {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  padding: 18px 10px;
+
+  width: calc(100% - 24px);
+  border-radius: 12px;
+
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+
+  color: $light;
+  background: rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(8px);
+  transform: translateX(-50%);
 }
 
 .button {
@@ -61,6 +83,21 @@
 
 .bottomTextAccent {
   opacity: 0.4;
+}
+
+.plusesGrid {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 250px;
+
+  transform: translateX(-30%);
+
+  svg {
+    stroke: #6b6b6b !important;
+    stroke-width: 1.5px !important;
+    opacity: 0.6;
+  }
 }
 
 @media screen and (max-width: $maxTablet) {
@@ -102,6 +139,10 @@
   .bottomText {
     margin-top: 100px;
     max-width: 100%;
+  }
+
+  .plusesGrid {
+    display: none !important;
   }
 }
 

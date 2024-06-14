@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import styles from '../../../styles/components/pages/Home/Individuals.module.scss';
 import clsx from 'clsx';
@@ -9,10 +11,13 @@ import { CardProps } from '@/lib/types';
 import ImageWithButton from '../../molecules/ImageWithButton';
 import AnimatedLineText from '../../molecules/AnimatedLineText';
 import CardDescription from '@/components/molecules/CardDescription';
+import { useRouter } from 'next/navigation';
 
 interface IndividualsProps extends CardProps {}
 
 export default function Individuals({ className }: IndividualsProps) {
+  const router = useRouter();
+
   return (
     <Section
       className={clsx(styles.section, className)}
@@ -24,6 +29,7 @@ export default function Individuals({ className }: IndividualsProps) {
         imageSrc="/images/individuals.png"
         imageAlt="girl and boy with laptop"
         btnText="THE INFIN FOR Individuals"
+        onClick={() => router.push('/individuals')}
       />
 
       <div className={styles.box}>

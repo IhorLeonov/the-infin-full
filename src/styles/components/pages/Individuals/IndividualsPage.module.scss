@@ -1,2 +1,18 @@
 @import '../../../mixins';
 @import '../../../variables';
+
+.main {
+  @include container;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media screen and (max-width: $maxMobile) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

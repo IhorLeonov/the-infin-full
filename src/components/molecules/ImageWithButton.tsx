@@ -16,12 +16,14 @@ interface ImageWithButtonProps
   imageSrc: string;
   btnText: string;
   imageAlt: string;
+  onClick: () => void;
 }
 
 export default function ImageWithButton({
   imageSrc,
   imageAlt,
   btnText,
+  onClick,
   className,
   ...props
 }: ImageWithButtonProps) {
@@ -52,7 +54,7 @@ export default function ImageWithButton({
         />
       </motion.div>
 
-      <Button className={styles.button} appearance="primary">
+      <Button className={styles.button} appearance="primary" onClick={onClick}>
         {btnText}
       </Button>
     </div>
