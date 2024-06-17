@@ -1,3 +1,7 @@
+@import '../../variables';
+@import '../../functions';
+@import '../../mixins';
+
 .section {
   width: 100%;
   overflow: hidden;
@@ -11,6 +15,18 @@
 .ghost {
   padding-left: 18px;
   padding-right: 18px;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .filled {
+    padding: sizeVW(30);
+    border-radius: sizeVW(30);
+  }
+
+  .ghost {
+    padding-left: sizeVW(18);
+    padding-right: sizeVW(18);
+  }
 }
 
 @media screen and (max-width: 767px) {

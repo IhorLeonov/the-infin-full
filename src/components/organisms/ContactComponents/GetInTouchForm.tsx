@@ -1,7 +1,7 @@
 'use clien';
 
 import React, { DetailedHTMLProps, HTMLAttributes, useState } from 'react';
-import styles from '../../../styles/components/pages/Contact/GetInTouchForm.module.scss';
+import styles from '../../../styles/components/organisms/Contact/GetInTouchForm.module.scss';
 import clsx from 'clsx';
 
 import { useForm } from 'react-hook-form';

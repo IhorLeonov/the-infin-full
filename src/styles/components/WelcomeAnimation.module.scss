@@ -1,4 +1,6 @@
+@import '../mixins';
 @import '../variables';
+@import '../functions';
 
 .wrapper {
   position: absolute;
@@ -32,6 +34,12 @@
 
 .the {
   margin-right: 18px;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .the {
+    margin-right: sizeVW(18);
+  }
 }
 
 @media screen and (min-width: 820px) {

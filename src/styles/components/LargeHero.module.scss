@@ -1,5 +1,6 @@
 @import '../mixins';
 @import '../variables';
+@import '../functions';
 
 .hero {
   position: relative;
@@ -20,6 +21,8 @@
 
 .plusIcon {
   opacity: 0.5;
+  width: 39px;
+  height: 39px;
 }
 
 .text {
@@ -48,7 +51,6 @@
   width: 100%;
   height: auto;
   border-radius: 6%;
-  // border-radius: 20px;
 }
 
 .imageText {
@@ -100,6 +102,51 @@
   }
 }
 
+@media screen and (min-width: $largeScreen) {
+  .hero {
+    padding-top: sizeVW(190);
+    padding-bottom: sizeVW(160);
+  }
+
+  .title {
+    margin-top: sizeVW(26);
+  }
+
+  .imageText {
+    bottom: sizeVW(18);
+    padding: sizeVW(18) sizeVW(10);
+
+    width: calc(100% - sizeVW(24));
+    border-radius: sizeVW(12);
+
+    font-size: sizeVW(18);
+    line-height: sizeVW(18);
+
+    backdrop-filter: blur(sizeVW(8));
+  }
+
+  .plusIcon {
+    width: sizeVW(39);
+    height: sizeVW(39);
+  }
+
+  .button {
+    margin-top: sizeVW(71);
+  }
+
+  .bottomText {
+    margin-top: sizeVW(154);
+  }
+
+  .plusesGrid {
+    top: sizeVW(250);
+
+    svg {
+      stroke-width: sizeVW(1.5) !important;
+    }
+  }
+}
+
 @media screen and (max-width: $maxTablet) {
   .hero {
     padding-top: 109px;
@@ -144,11 +191,18 @@
   .plusesGrid {
     display: none !important;
   }
+
+  .imageText {
+    bottom: 36px;
+  }
 }
 
 @media screen and (max-width: $maxMobile) {
   .button {
     width: 211px;
     height: 72px;
+  }
+  .imageText {
+    bottom: 18px;
   }
 }

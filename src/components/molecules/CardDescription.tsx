@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../styles/components/CardDescription.module.scss';
+import styles from '../../styles/components/molecules/CardDescription.module.scss';
 import clsx from 'clsx';
 
 import { Divider } from '../atoms/Divider';

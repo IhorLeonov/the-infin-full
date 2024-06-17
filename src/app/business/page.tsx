@@ -1,4 +1,4 @@
-import styles from '../../styles/components/pages/Business/BusinessPage.module.scss';
+import styles from '../../styles/components/organisms/Business/BusinessPage.module.scss';
 
 import LargeHero from '@/components/organisms/LargeHero';
 import BottomComponent from '@/components/BottomComponent';

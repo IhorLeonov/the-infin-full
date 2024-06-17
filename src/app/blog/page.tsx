@@ -1,4 +1,4 @@
-import styles from '../../styles/components/pages/Blog/BlogPage.module.scss';
+import styles from '../../styles/components/organisms/Blog/BlogPage.module.scss';
 import BottomComponent from '@/components/BottomComponent';
 
 interface BlogPageProps {}

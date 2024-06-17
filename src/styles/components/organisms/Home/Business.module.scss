@@ -1,10 +1,12 @@
 @import '../../../variables';
 @import '../../../mixins';
+@import '../../../functions';
 
 .section {
   display: flex;
   gap: 30px;
-  background-color: #e8e8e8;
+
+  background-color: $light;
 }
 
 .box {
@@ -22,6 +24,21 @@
   max-width: 421px;
 }
 
+@media screen and (min-width: $largeScreen) {
+  .section {
+    gap: sizeVW(30);
+  }
+
+  .title {
+    margin-top: sizeVW(36);
+    max-width: sizeVW(668);
+  }
+
+  .imageWithButton {
+    max-width: sizeVW(421);
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .section {
     flex-direction: column;
@@ -29,14 +46,10 @@
   .box {
     width: 100%;
   }
-  .imageWithButton {
-    order: 3;
-  }
 }
 
 @media screen and (max-width: 900px) {
   .imageWithButton {
     max-width: 100%;
-    margin-left: 0;
   }
 }

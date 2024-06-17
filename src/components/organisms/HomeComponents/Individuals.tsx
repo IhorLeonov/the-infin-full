@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import styles from '../../../styles/components/pages/Home/Individuals.module.scss';
+import styles from '../../../styles/components/organisms/Home/Individuals.module.scss';
 import clsx from 'clsx';
 
 import { Section } from '../../atoms/Section';

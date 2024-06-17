@@ -1,7 +1,7 @@
 'use clien';
 
 import React, { DetailedHTMLProps, HTMLAttributes, useState } from 'react';
-import styles from '../../../styles/components/pages/Contact/ScheduleDemoForm.module.scss';
+import styles from '../../../styles/components/organisms/Contact/ScheduleDemoForm.module.scss';
 import clsx from 'clsx';
 
 import PhoneInput from 'react-phone-input-2';

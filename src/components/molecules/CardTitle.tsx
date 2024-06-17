@@ -1,5 +1,5 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
-import styles from '../../styles/components/CardTitle.module.scss';
+import styles from '../../styles/components/molecules/CardTitle.module.scss';
 import clsx from 'clsx';
 
 export interface CardTitleProps

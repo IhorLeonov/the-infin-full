@@ -1,5 +1,6 @@
 @import '../../../variables';
 @import '../../../mixins';
+@import '../../../functions';
 
 .hero {
   position: relative;
@@ -88,6 +89,47 @@
   margin-left: auto;
   align-self: end;
   width: 179px;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .hero {
+    padding-top: sizeVW(242);
+    margin-bottom: sizeVW(130);
+  }
+
+  .imageContainer {
+    border-radius: sizeVW(20);
+    width: sizeVW(201);
+  }
+
+  .image {
+    border-radius: sizeVW(20);
+  }
+
+  .bottomBlock {
+    margin-top: sizeVW(128);
+  }
+
+  .mainTitle {
+    max-width: sizeVW(910);
+  }
+
+  .smallText {
+    span {
+      max-width: sizeVW(56);
+    }
+  }
+
+  .smallText,
+  .description {
+    width: sizeVW(113);
+    margin-right: sizeVW(25);
+  }
+
+  .button {
+    width: sizeVW(179);
+    height: sizeVW(90);
+  }
 }
 
 @media screen and (max-width: $maxTablet) {

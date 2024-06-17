@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useContext, useEffect, useRef } from 'react';
-import styles from '../../../styles/components/pages/Home/Reviews.module.scss';
+import styles from '../../../styles/components/organisms/Home/Reviews.module.scss';
 import clsx from 'clsx';
 
 import { Section } from '../../atoms/Section';

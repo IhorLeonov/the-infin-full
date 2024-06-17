@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import styles from '../../styles/components/AnimatedText.module.scss';
+import styles from '../../styles/components/molecules/AnimatedText.module.scss';
 
 import { motion, useAnimation, useInView, Variant } from 'framer-motion';
 import clsx from 'clsx';

@@ -1,5 +1,5 @@
 import Hero from '@/components/organisms/ContactComponents/Hero';
-import styles from '../../styles/components/pages/Contact/ContactPage.module.scss';
+import styles from '../../styles/components/organisms/Contact/ContactPage.module.scss';
 import BottomComponent from '@/components/BottomComponent';
 import LargeImage from '@/components/organisms/LargeImage';
 import Contact from '@/components/organisms/ContactComponents/Contact';

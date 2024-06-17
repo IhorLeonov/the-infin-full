@@ -1,5 +1,5 @@
 import React, { DetailedHTMLProps, HTMLAttributes } from 'react';
-import styles from '../../styles/components/Switcher.module.scss';
+import styles from '../../styles/components/molecules/Switcher.module.scss';
 import clsx from 'clsx';
 
 import { colors } from '@/lib/constants';

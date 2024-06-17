@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import styles from '../../../styles/components/pages/Contact/Contact.module.scss';
+import styles from '../../../styles/components/organisms/Contact/Contact.module.scss';
 
 import { Section } from '@/components/atoms/Section';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../../styles/components/pages/Contact/Hero.module.scss';
+import styles from '../../../styles/components/organisms/Contact/Hero.module.scss';
 
 import { Section } from '@/components/atoms/Section';
 

@@ -1,4 +1,4 @@
-import styles from '../../styles/components/pages/Capitalism/CapitalismPage.module.scss';
+import styles from '../../styles/components/organisms/Capitalism/CapitalismPage.module.scss';
 import BottomComponent from '@/components/BottomComponent';
 
 interface CapitalismPageProps {}

@@ -1,5 +1,6 @@
 @import '../variables';
 @import '../mixins';
+@import '../functions';
 
 .header {
   position: fixed;
@@ -20,11 +21,8 @@
 
 .logo {
   @include cursor-pointer;
-}
 
-.logo svg {
   max-width: 514px;
-  width: 100%;
 }
 
 .logo:hover svg {
@@ -63,11 +61,13 @@
 
 .button {
   @include main-button;
+
   margin-right: 46px;
+  width: 177px;
+  height: 90px;
 
   background: none;
   font-weight: 500;
-
   color: $dark;
   border: 1px solid rgba(18, 18, 18, 0.16);
 
@@ -94,6 +94,28 @@
 
 .buttonHidden {
   visibility: hidden;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .header {
+    max-width: 100%;
+  }
+  .topBlock {
+    padding: sizeVW(30) sizeVW(30) 0 sizeVW(30);
+  }
+  .logo {
+    max-width: sizeVW(514);
+  }
+  .nav {
+    padding-bottom: sizeVW(6);
+  }
+  .button {
+    margin-right: sizeVW(46);
+    width: sizeVW(177);
+    height: sizeVW(90);
+
+    border-width: sizeVW(1);
+  }
 }
 
 @media screen and (max-width: $maxTablet) {

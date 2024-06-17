@@ -1,4 +1,4 @@
-import styles from '../../styles/components/pages/Marketing/MarketingPage.module.scss';
+import styles from '../../styles/components/organisms/Marketing/MarketingPage.module.scss';
 import BottomComponent from '@/components/BottomComponent';
 
 interface MarketingPageProps {}
