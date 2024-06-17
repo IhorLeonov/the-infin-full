@@ -3,6 +3,7 @@ import localFont from 'next/font/local';
 
 import '../styles/globals.scss';
 import 'react-phone-input-2/lib/style.css';
+import type { Viewport } from 'next';
 
 import { AppContextProvider } from '@/context/app.context';
 import ClientLayout from '@/components/ClientLayout';
@@ -10,6 +11,10 @@ import ClientLayout from '@/components/ClientLayout';
 export const metadata: Metadata = {
   title: 'The Infin',
   description: 'The official landing page, built with Next.js',
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
 };
 
 const neueHaasGrotesk = localFont({
