@@ -1,5 +1,6 @@
 @import '../../../mixins.scss';
 @import '../../../variables';
+@import '../../../functions';
 
 .page {
   background-color: $grey;
@@ -14,6 +15,12 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .cardList {
+    gap: sizeVW(12);
+  }
 }
 
 @media screen and (max-width: $maxMobile) {

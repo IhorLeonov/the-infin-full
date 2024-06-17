@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../../styles/components/pages/Contact/GetInTouch.module.scss';
+import styles from '../../../styles/components/organisms/Contact/GetInTouch.module.scss';
 
 interface GetInTouchProps {}
 

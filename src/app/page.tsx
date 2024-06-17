@@ -1,4 +1,4 @@
-import styles from '../styles/components/pages/Home/HomePage.module.scss';
+import styles from '../styles/components/organisms/Home/HomePage.module.scss';
 
 import Hero from '@/components/organisms/HomeComponents/Hero';
 import WhyChoose from '@/components/organisms/HomeComponents/WhyChoose';

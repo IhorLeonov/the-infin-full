@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import styles from '../../../styles/components/pages/Individuals/Benefits.module.scss';
+import styles from '../../../styles/components/organisms/Individuals/Benefits.module.scss';
 
 import PlusesIcon from '../../../../public/icons/benefits-pluses.svg';
 import PlusesIconMobile from '../../../../public/icons/benefits-pluses-mobile.svg';

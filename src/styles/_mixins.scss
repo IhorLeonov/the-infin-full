@@ -1,26 +1,30 @@
 @import './variables';
+@import './functions';
 
 @mixin container {
   padding: 0 12px;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $maxMobile) {
     padding: 0 10px;
   }
+  @media screen and (min-width: $largeScreen) {
+    padding: 0 sizeVW(12);
+  }
 }
-
-// headings
 
 @mixin h1 {
   font-size: 120px;
   font-weight: 500;
   line-height: 92%;
-  letter-spacing: -1.2px;
+  letter-spacing: -2%;
   text-transform: uppercase;
   color: $dark;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $maxMobile) {
     font-size: 76px;
-    letter-spacing: -1.52px;
+  }
+  @media screen and (min-width: $largeScreen) {
+    font-size: sizeVW(120);
   }
 }
 
@@ -28,13 +32,15 @@
   font-size: 88px;
   font-weight: 500;
   line-height: 100%;
-  letter-spacing: -0.88px;
+  letter-spacing: -1%;
   text-transform: uppercase;
   color: $dark;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $maxMobile) {
     font-size: 52px;
-    letter-spacing: -0.52px;
+  }
+  @media screen and (min-width: $largeScreen) {
+    font-size: sizeVW(88);
   }
 }
 
@@ -42,12 +48,15 @@
   font-size: 62px;
   font-weight: 500;
   line-height: 110%;
-  letter-spacing: -0.62px;
+  letter-spacing: -1%;
   color: $dark;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $maxMobile) {
     font-size: 42px;
     letter-spacing: -0.42px;
+  }
+  @media screen and (min-width: $largeScreen) {
+    font-size: sizeVW(62);
   }
 }
 
@@ -55,10 +64,15 @@
   font-size: 32px;
   font-weight: 600;
   line-height: 120%;
+  letter-spacing: 0%;
+
   color: $dark;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $maxMobile) {
     font-size: 28px;
+  }
+  @media screen and (min-width: $largeScreen) {
+    font-size: sizeVW(32);
   }
 }
 
@@ -68,9 +82,13 @@
   font-size: 32px;
   font-weight: 500;
   line-height: 120%;
+  letter-spacing: 0%;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $maxMobile) {
     font-size: 28px;
+  }
+  @media screen and (min-width: $largeScreen) {
+    font-size: sizeVW(32);
   }
 }
 
@@ -78,26 +96,39 @@
   font-size: 20px;
   font-weight: 500;
   line-height: 130%;
+  letter-spacing: 0%;
+
+  @media screen and (min-width: $largeScreen) {
+    font-size: sizeVW(20);
+  }
 }
 
 @mixin p3 {
   font-size: 14px;
   font-weight: 500;
   line-height: 130%;
+  letter-spacing: 0%;
+
+  @media screen and (min-width: $largeScreen) {
+    font-size: sizeVW(14);
+  }
 }
 
 @mixin p4 {
   font-size: 12px;
   font-weight: 500;
   line-height: 130%;
-  opacity: 0.4;
-}
+  letter-spacing: 0%;
 
-// buttons
+  opacity: 0.4;
+
+  @media screen and (min-width: $largeScreen) {
+    font-size: sizeVW(12);
+  }
+}
 
 @mixin main-button {
   padding: 12px;
-
   width: 223px;
   height: 90px;
 
@@ -111,15 +142,23 @@
   text-transform: uppercase;
 
   transition: all 0.4s;
-}
 
-// transitions
+  @media screen and (min-width: $largeScreen) {
+    padding: sizeVW(12);
+
+    width: sizeVW(223);
+    height: sizeVW(90);
+
+    border-radius: sizeVW(129);
+    border-width: sizeVW(1);
+    font-size: sizeVW(12);
+    letter-spacing: sizeVW(0.24);
+  }
+}
 
 @mixin transition {
   transition: all 0.4s;
 }
-
-// coursors
 
 @mixin cursor-default {
   cursor: url('/icons/cursor.svg'), default;

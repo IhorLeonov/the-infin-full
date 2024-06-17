@@ -1,4 +1,6 @@
 @import '../../variables';
+@import '../../functions';
+@import '../../mixins';
 
 .hr {
   margin-bottom: 30px;
@@ -9,4 +11,11 @@
   border: none;
   background: $dark;
   opacity: 0.12;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .hr {
+    margin-bottom: sizeVW(30);
+    height: sizeVW(1);
+  }
 }

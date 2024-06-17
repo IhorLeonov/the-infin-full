@@ -1,5 +1,6 @@
 @import '../mixins';
 @import '../variables';
+@import '../functions';
 
 .footer {
   position: relative;
@@ -81,6 +82,47 @@
 
 .copyrightAccent {
   opacity: 0.4;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .footer {
+    padding-top: sizeVW(126);
+    padding-left: sizeVW(18);
+    padding-right: sizeVW(18);
+  }
+
+  .topBlock {
+    margin-bottom: sizeVW(120);
+  }
+
+  .text {
+    min-width: sizeVW(220);
+    width: sizeVW(220);
+  }
+
+  .list {
+    grid-template-columns: repeat(5, sizeVW(113));
+
+    margin-left: sizeVW(154);
+  }
+
+  .listItem {
+    width: sizeVW(113);
+  }
+
+  .title {
+    margin-bottom: sizeVW(16);
+  }
+
+  .thinkseb {
+    left: sizeVW(18);
+    gap: sizeVW(10);
+  }
+
+  .copyright {
+    font-size: sizeVW(12);
+    line-height: sizeVW(16);
+  }
 }
 
 @media screen and (max-width: $maxTablet) {

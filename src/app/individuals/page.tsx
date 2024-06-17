@@ -1,5 +1,6 @@
+import styles from '../../styles/components/organisms/Individuals/IndividualsPage.module.scss';
+
 import LargeHero from '@/components/organisms/LargeHero';
-import styles from '../../styles/components/pages/Individuals/IndividualsPage.module.scss';
 import BottomComponent from '@/components/BottomComponent';
 import HowWorks from '@/components/organisms/IndividualsComponents/HowWorks';
 import Benefits from '@/components/organisms/IndividualsComponents/Benefits';

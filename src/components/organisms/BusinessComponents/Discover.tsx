@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../../styles/components/pages/Business/Discover.module.scss';
+import styles from '../../../styles/components/organisms/Business/Discover.module.scss';
 import { Section } from '@/components/atoms/Section';
 
 interface DiscoverProps {}

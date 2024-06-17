@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../../styles/components/pages/Business/DiscoverImage.module.scss';
+import styles from '../../../styles/components/organisms/Business/DiscoverImage.module.scss';
 
 import LargeImage from '../LargeImage';
 import PlayButton from '@/components/molecules/PlayButton';

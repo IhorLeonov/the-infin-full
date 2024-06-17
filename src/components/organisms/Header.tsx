@@ -35,7 +35,7 @@ export default function Header({}: HeaderProps) {
 
   const variantsHeader: Variants = {
     short: {
-      height: isMenuOpen ? '100dvh' : '68px',
+      height: isMenuOpen ? '100dvh' : '',
       transition: { duration: 0.4 },
     },
   };
@@ -55,21 +55,21 @@ export default function Header({}: HeaderProps) {
   };
 
   const variantsLogo: Variants = {
-    short: { maxWidth: 285 },
-    large: { maxWidth: 514 },
+    // short: { maxWidth: 285 },
+    // large: { maxWidth: 514 },
   };
 
   const variantsButton: Variants = {
     short: {
-      height: 50,
-      width: 130,
+      // height: 50,
+      // width: 130,
     },
   };
 
   const variantsLink = (column: number): Variants => {
     return {
-      short: { marginRight: 24, gridColumn: column },
-      large: { gridColumn: 5 },
+      // short: { marginRight: 24, gridColumn: column },
+      // large: { gridColumn: 5 },
     };
   };
 
@@ -152,9 +152,9 @@ export default function Header({}: HeaderProps) {
           <motion.div
             variants={variantsLogo}
             transition={{ duration: 0.7, delay: 0.1 }}
+            className={styles.logo}
           >
             <Logo
-              className={styles.logo}
               fill={calculateLogoColor()}
               onClick={() => router.push('/')}
             />

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../../styles/components/pages/Individuals/HowWorks.module.scss';
+import styles from '../../../styles/components/organisms/Individuals/HowWorks.module.scss';
 import { Section } from '@/components/atoms/Section';
 
 interface HowWorksProps {}

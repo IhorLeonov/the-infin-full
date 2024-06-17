@@ -7,12 +7,12 @@ $lightGrey: #f3f3f3;
 $grey: #c1c1c1;
 $darkGrey: #6b6b6b;
 $red: #f00;
-$error: #fc836d;
 
 //breakpoints
-$maxMobile: '768px';
+$maxMobile: '767px';
 $maxTablet: '1080px';
 $maxDesktop: '1440px';
+$largeScreen: '1441px';
 
 :export {
   dark: $dark;

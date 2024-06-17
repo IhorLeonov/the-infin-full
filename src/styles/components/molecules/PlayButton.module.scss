@@ -1,3 +1,4 @@
+@import '../../functions';
 @import '../../variables';
 @import '../../mixins';
 
@@ -38,5 +39,27 @@
   background-color: $dark;
   svg {
     fill: $accent;
+  }
+}
+
+@media screen and (min-width: $largeScreen) {
+  .button {
+    padding: sizeVW(12);
+    width: sizeVW(185);
+  }
+
+  .buttonText {
+    font-size: sizeVW(14);
+    letter-spacing: sizeVW(14);
+  }
+
+  .buttonCircle {
+    width: sizeVW(66);
+    height: sizeVW(66);
+
+    svg {
+      width: sizeVW(16);
+      height: sizeVW(16);
+    }
   }
 }

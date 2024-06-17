@@ -1,5 +1,5 @@
 import React, { DetailedHTMLProps, HtmlHTMLAttributes } from 'react';
-import styles from '../../styles/components/ReviewList.module.scss';
+import styles from '../../styles/components/molecules/ReviewList.module.scss';
 import clsx from 'clsx';
 
 import { IReview } from '@/lib/types';

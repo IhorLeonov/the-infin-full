@@ -1,5 +1,6 @@
 @import '../mixins';
 @import '../variables';
+@import '../functions';
 
 .section {
   position: relative;
@@ -65,6 +66,12 @@
   height: 100%;
 }
 
+.plusesLeft,
+.plusesRight {
+  width: 145px;
+  height: 92px;
+}
+
 .plusesLeft {
   position: absolute;
   left: 30px;
@@ -77,6 +84,63 @@
   top: 30px;
 
   rotate: 180deg;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .section {
+    & .button {
+      margin-top: sizeVW(24);
+      width: sizeVW(260);
+    }
+  }
+
+  .smallText {
+    margin-top: sizeVW(228);
+  }
+
+  .targetMiddle {
+    margin-top: sizeVW(20);
+  }
+
+  .mainTitle {
+    max-width: sizeVW(782);
+  }
+
+  .imageContainer {
+    border-radius: sizeVW(20);
+    width: sizeVW(223);
+    height: sizeVW(223);
+  }
+
+  .girlImageContainer {
+    left: sizeVW(30);
+    top: sizeVW(30);
+  }
+
+  .boyImageContainer {
+    right: sizeVW(30);
+    bottom: sizeVW(30);
+  }
+
+  .image {
+    border-radius: sizeVW(30);
+  }
+
+  .plusesLeft,
+  .plusesRight {
+    width: sizeVW(145);
+    height: sizeVW(92);
+  }
+
+  .plusesLeft {
+    left: sizeVW(30);
+    bottom: sizeVW(30);
+  }
+
+  .plusesRight {
+    right: sizeVW(30);
+    top: sizeVW(30);
+  }
 }
 
 @media screen and (max-width: $maxTablet) {

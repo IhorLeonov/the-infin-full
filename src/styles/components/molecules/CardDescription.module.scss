@@ -1,5 +1,6 @@
-@import '../variables';
-@import '../mixins';
+@import '../../variables';
+@import '../../mixins';
+@import '../../functions';
 
 .cardDescription {
   margin-top: 40px;
@@ -42,6 +43,42 @@
 
 .bottomTextRight {
   margin-left: 106px;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .cardDescription {
+    margin-top: sizeVW(40);
+  }
+
+  .topBlock {
+    padding-bottom: sizeVW(60);
+  }
+
+  .topTitle,
+  .bottomTitle {
+    @include p4;
+    min-width: sizeVW(88);
+    width: sizeVW(88);
+    margin-right: sizeVW(34);
+  }
+
+  .hr {
+    width: calc(100% + sizeVW(30)) !important;
+  }
+
+  .bigText {
+    max-width: sizeVW(668);
+  }
+
+  .bottomTextLeft,
+  .bottomTextRight {
+    gap: sizeVW(12);
+    max-width: sizeVW(223);
+  }
+
+  .bottomTextRight {
+    margin-left: sizeVW(106);
+  }
 }
 
 @media screen and (max-width: 1200px) {

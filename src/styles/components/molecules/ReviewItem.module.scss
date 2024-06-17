@@ -1,4 +1,6 @@
-@import '../variables';
+@import '../../functions';
+@import '../../variables';
+@import '../../mixins';
 
 .reviewer {
   display: flex;
@@ -26,6 +28,29 @@
   font-weight: 500;
   line-height: 22px;
   opacity: 0.4;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .reviewer {
+    margin-top: sizeVW(24);
+  }
+
+  .photo {
+    margin-left: sizeVW(1);
+  }
+
+  .nameBox {
+    margin-left: sizeVW(12);
+  }
+
+  .name {
+    line-height: sizeVW(22);
+  }
+
+  .job {
+    font-size: sizeVW(14);
+    line-height: sizeVW(22);
+  }
 }
 
 @media screen and (max-width: $maxMobile) {
