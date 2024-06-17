@@ -40,18 +40,18 @@ export default function ClientLayout({ children }: ClientLayotProps) {
 
   return (
     <>
-      {/* <WelcomeAnimation setShowAllDom={setShowAllDom} /> */}
-      {/* {showAllDom && ( */}
-      <div
-        className={styles.layout}
-        style={{ backgroundColor: backgroundColor() }}
-      >
-        <div className={styles.container}>
-          <Header />
-          {children}
+      <WelcomeAnimation setShowAllDom={setShowAllDom} />
+      {showAllDom && (
+        <div
+          className={styles.layout}
+          style={{ backgroundColor: backgroundColor() }}
+        >
+          <div className={styles.container}>
+            <Header />
+            {children}
+          </div>
         </div>
-      </div>
-      {/* )} */}
+      )}
     </>
   );
 }

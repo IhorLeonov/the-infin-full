@@ -84,7 +84,7 @@
   opacity: 0.4;
 }
 
-@media screen and (max-width: $largeScreen) {
+@media screen and (min-width: $largeScreen) {
   .footer {
     padding-top: sizeVW(126);
     padding-left: sizeVW(18);
