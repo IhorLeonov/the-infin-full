@@ -1,11 +1,17 @@
 @import '../../../mixins';
 @import '../../../variables';
+@import '../../../functions';
 
 .directing {
   background-color: $light;
 
   display: grid;
   grid-template-columns: 40% 60%;
+}
+
+.imageContainer {
+  width: 537px;
+  height: 687px;
 }
 
 .image {
@@ -37,6 +43,25 @@
   margin-left: auto;
 
   width: 243px !important;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .rightBlock {
+    padding-left: sizeVW(30);
+  }
+
+  .title {
+    margin-top: sizeVW(80);
+  }
+
+  .button {
+    width: sizeVW(243) !important;
+  }
+
+  .imageContainer {
+    width: sizeVW(537);
+    height: sizeVW(687);
+  }
 }
 
 @media screen and (max-width: $maxTablet) {

@@ -1,5 +1,6 @@
 @import '../../../mixins';
 @import '../../../variables';
+@import '../../../functions';
 
 .howWorks {
   padding-top: 80px;
@@ -57,6 +58,31 @@
 .listItemText {
   padding-top: 24px;
   opacity: 0.4;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .howWorks {
+    padding-top: sizeVW(80);
+    padding-bottom: sizeVW(80);
+  }
+
+  .list {
+    margin-top: sizeVW(255);
+  }
+
+  .listItem {
+    max-width: sizeVW(286);
+  }
+
+  .listItemNumber {
+    font-size: sizeVW(88);
+    letter-spacing: sizeVW(-0.88);
+    padding-bottom: sizeVW(10);
+  }
+
+  .listItemText {
+    padding-top: sizeVW(24);
+  }
 }
 
 @media screen and (max-width: $maxTablet) {

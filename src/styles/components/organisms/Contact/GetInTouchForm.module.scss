@@ -1,5 +1,6 @@
 @import '../../../variables';
 @import '../../../mixins';
+@import '../../../functions';
 
 .form {
   display: flex;
@@ -34,6 +35,31 @@
 
 .submitBtn {
   margin-top: 14px;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .form {
+    gap: sizeVW(26);
+    max-width: sizeVW(488);
+  }
+
+  .nameBox {
+    gap: sizeVW(12);
+  }
+
+  .label {
+    font-size: sizeVW(12);
+    line-height: sizeVW(12);
+  }
+
+  .input,
+  .textarea {
+    margin-top: sizeVW(10);
+  }
+
+  .submitBtn {
+    margin-top: sizeVW(14);
+  }
 }
 
 @media screen and (max-width: $maxMobile) {

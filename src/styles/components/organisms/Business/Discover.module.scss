@@ -1,5 +1,6 @@
 @import '../../../mixins';
 @import '../../../variables';
+@import '../../../functions';
 
 .discover {
   display: flex;
@@ -19,6 +20,21 @@
   @include p3;
   opacity: 0.4;
   max-width: 223px;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .discover {
+    padding-top: sizeVW(148);
+    padding-bottom: sizeVW(36);
+  }
+
+  .title {
+    max-width: sizeVW(610);
+  }
+
+  .text {
+    max-width: sizeVW(223);
+  }
 }
 
 @media screen and (max-width: 900px) {

@@ -9,8 +9,16 @@
   align-items: center;
 }
 
-.photo {
+.imageContainer {
   margin-left: 1px;
+
+  width: 52px;
+  height: 52px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
 }
 
 .nameBox {
@@ -35,8 +43,10 @@
     margin-top: sizeVW(24);
   }
 
-  .photo {
+  .imageContainer {
     margin-left: sizeVW(1);
+    width: sizeVW(52);
+    height: sizeVW(52);
   }
 
   .nameBox {

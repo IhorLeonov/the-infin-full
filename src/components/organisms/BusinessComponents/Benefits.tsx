@@ -5,10 +5,10 @@ import styles from '../../../styles/components/organisms/Business/Benefits.modul
 
 import PlusesIcon from '../../../../public/icons/benefits-pluses.svg';
 import PlusesIconMobile from '../../../../public/icons/benefits-pluses-mobile.svg';
+import useCheckIsMobile from '@/hooks/useCheckIsMobile';
 
 import { Section } from '../../atoms/Section';
 import { CardTitle } from '../../molecules/CardTitle';
-import useCheckIsMobile from '@/hooks/useCheckIsMobile';
 
 interface BenefitsProps {}
 

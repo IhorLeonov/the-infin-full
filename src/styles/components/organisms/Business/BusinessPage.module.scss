@@ -1,5 +1,6 @@
 @import '../../../mixins';
 @import '../../../variables';
+@import '../../../functions';
 
 .topBlock {
   @include container;
@@ -16,6 +17,18 @@
   flex-direction: column;
   gap: 12px;
   margin-bottom: 12px;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .topBlock {
+    padding-bottom: sizeVW(12);
+    border-radius: 0 0 sizeVW(36) sizeVW(36);
+  }
+
+  .bottomBlock {
+    gap: sizeVW(12);
+    margin-bottom: sizeVW(12);
+  }
 }
 
 @media screen and (max-width: $maxMobile) {

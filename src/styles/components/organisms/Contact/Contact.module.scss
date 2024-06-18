@@ -1,5 +1,6 @@
 @import '../../../mixins';
 @import '../../../variables';
+@import '../../../functions';
 
 .contact {
   background-color: $light;
@@ -41,6 +42,9 @@
   stroke: $dark;
   stroke-width: 2.5px;
   opacity: 0.08;
+
+  width: 39px;
+  height: 39px;
 }
 
 .formContainer {
@@ -67,6 +71,49 @@
 
 .form {
   margin-top: 88px;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .contact {
+    height: sizeVW(809);
+  }
+
+  .switcher {
+    top: sizeVW(30);
+    left: sizeVW(30);
+  }
+
+  .hr {
+    height: sizeVW(611);
+    width: sizeVW(1);
+    margin-top: sizeVW(30);
+    margin-bottom: sizeVW(30);
+  }
+
+  .firstPlus,
+  .secondPlus {
+    stroke-width: sizeVW(2.5);
+    width: sizeVW(39);
+    height: sizeVW(39);
+  }
+
+  .formContainer {
+    padding-left: sizeVW(14);
+  }
+
+  .formBox {
+    max-width: sizeVW(488);
+  }
+
+  .formTitle {
+    margin-top: sizeVW(13);
+    font-size: sizeVW(12);
+    letter-spacing: sizeVW(0.24);
+  }
+
+  .form {
+    margin-top: sizeVW(88);
+  }
 }
 
 @media screen and (max-width: $maxTablet) {

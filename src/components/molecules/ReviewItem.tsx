@@ -27,14 +27,16 @@ export default function ReviewItem({
       <p className={styles.review}>{review}</p>
 
       <div className={styles.reviewer}>
-        <Image
-          className={styles.photo}
-          src={imageSrc}
-          width={52}
-          height={52}
-          alt={name}
-          loading="lazy"
-        />
+        <div className={styles.imageContainer}>
+          <Image
+            className={styles.image}
+            src={imageSrc}
+            width={52}
+            height={52}
+            alt={name}
+            loading="lazy"
+          />
+        </div>
 
         <div className={styles.nameBox}>
           <div className={styles.name}>{name}</div>

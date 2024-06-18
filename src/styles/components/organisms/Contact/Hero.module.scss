@@ -1,5 +1,6 @@
 @import '../../../variables';
 @import '../../../mixins';
+@import '../../../functions';
 
 .hero {
   padding-top: 191px;
@@ -63,6 +64,44 @@
   width: 146px;
 
   text-align: right;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .hero {
+    padding-top: sizeVW(191);
+    padding-bottom: sizeVW(30);
+  }
+
+  .wrapper {
+    margin-top: sizeVW(26);
+  }
+
+  .title {
+    max-width: sizeVW(587);
+  }
+
+  .bigText {
+    max-width: sizeVW(262);
+
+    font-size: sizeVW(16);
+    line-height: sizeVW(22);
+  }
+
+  .address {
+    margin-left: sizeVW(84);
+    font-size: sizeVW(12);
+    line-height: sizeVW(18);
+  }
+
+  .addressKeys {
+    width: sizeVW(79);
+    letter-spacing: sizeVW(-0.12);
+  }
+
+  .addressValues {
+    margin-left: sizeVW(8);
+    width: sizeVW(146);
+  }
 }
 
 @media screen and (max-width: 1220px) {

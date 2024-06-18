@@ -43,7 +43,7 @@ export default function Directing({}: DirectingProps) {
         <Button
           appearance="primary"
           className={styles.button}
-          onClick={() => router.push('/individuals')}
+          onClick={() => router.push('/contact')}
         >
           See The INFIN for yourself
         </Button>

@@ -1,5 +1,6 @@
 @import '../../../mixins';
 @import '../../../variables';
+@import '../../../functions';
 
 .benefits {
   position: relative;
@@ -48,6 +49,45 @@
   position: absolute;
   bottom: 30px;
   left: 30px;
+
+  width: 303px;
+  height: 293px;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .benefits {
+    padding-bottom: sizeVW(92);
+  }
+
+  .title {
+    margin-top: sizeVW(36);
+  }
+
+  .list {
+    gap: sizeVW(60);
+    margin-top: sizeVW(50);
+  }
+
+  .listItem {
+    gap: sizeVW(40);
+  }
+
+  .smallTitle {
+    min-width: sizeVW(113);
+    width: sizeVW(113);
+  }
+
+  .text {
+    font-size: sizeVW(20);
+  }
+
+  .plusesIcon {
+    bottom: sizeVW(30);
+    left: sizeVW(30);
+
+    width: sizeVW(303);
+    height: sizeVW(293);
+  }
 }
 
 @media screen and (max-width: $maxTablet) {
