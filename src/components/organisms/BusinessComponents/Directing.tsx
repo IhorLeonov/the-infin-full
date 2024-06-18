@@ -17,7 +17,7 @@ export default function Directing({}: DirectingProps) {
 
   return (
     <Section type="filled" className={styles.directing}>
-      <div className={styles.imageBox}>
+      <div className={styles.imageContainer}>
         <Image
           className={styles.image}
           src="/images/directing-business.png"
@@ -40,7 +40,7 @@ export default function Directing({}: DirectingProps) {
         <Button
           appearance="primary"
           className={styles.button}
-          onClick={() => router.push('/individuals')}
+          onClick={() => router.push('/contact')}
         >
           See The INFIN for yourself
         </Button>

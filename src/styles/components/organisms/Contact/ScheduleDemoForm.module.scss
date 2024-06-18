@@ -1,5 +1,6 @@
 @import '../../../variables';
 @import '../../../mixins';
+@import '../../../functions';
 
 .form {
   display: flex;
@@ -64,26 +65,12 @@
   font-family: inherit !important;
 }
 
-// .buttonClass :first-child {
-// padding: 0 !important;
-// }
-
-// .buttonClass :first-child div {
-// position: static !important;
-// width: 29px !important;
-// height: 14px !important;
-// height: 14px;
-// }
-
 .inputClass::placeholder {
   font-size: 16px !important;
   font-weight: 500 !important;
   line-height: 22px !important;
   color: $grey !important;
 }
-
-// .dropdownClass {
-// }
 
 .phoneInput {
   display: flex;
@@ -92,6 +79,59 @@
 
 .submitBtn {
   margin-top: 14px;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .form {
+    gap: sizeVW(26);
+    max-width: sizeVW(488);
+  }
+
+  .labelBox {
+    gap: sizeVW(12);
+  }
+
+  .label {
+    font-size: sizeVW(12);
+    line-height: sizeVW(12);
+  }
+
+  .input {
+    margin-top: sizeVW(10);
+  }
+
+  .containerClass {
+    margin-top: sizeVW(10) !important;
+    gap: sizeVW(12);
+  }
+
+  .inputClass {
+    padding: sizeVW(13) sizeVW(16) !important;
+
+    height: sizeVW(48) !important;
+    border-radius: sizeVW(6) !important;
+  }
+
+  .buttonClass {
+    padding: sizeVW(13) sizeVW(16) !important;
+
+    height: sizeVW(48) !important;
+    width: sizeVW(123) !important;
+    border-radius: sizeVW(6) !important;
+  }
+
+  .inputClass::placeholder {
+    font-size: sizeVW(16) !important;
+    line-height: sizeVW(22) !important;
+  }
+
+  .phoneInput {
+    height: sizeVW(48);
+  }
+
+  .submitBtn {
+    margin-top: sizeVW(14);
+  }
 }
 
 @media screen and (max-width: $maxMobile) {

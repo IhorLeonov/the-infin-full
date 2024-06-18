@@ -1,5 +1,6 @@
 @import '../../../mixins';
 @import '../../../variables';
+@import '../../../functions';
 
 .page {
   background-color: $dark;
@@ -15,6 +16,16 @@
 
 .bottomComponent {
   margin-top: 12px;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .main {
+    gap: sizeVW(12);
+  }
+
+  .bottomComponent {
+    margin-top: sizeVW(12);
+  }
 }
 
 @media screen and (max-width: $maxMobile) {

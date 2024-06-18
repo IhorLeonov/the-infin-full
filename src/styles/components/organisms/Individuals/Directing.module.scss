@@ -1,5 +1,6 @@
 @import '../../../mixins';
 @import '../../../variables';
+@import '../../../functions';
 
 .directing {
   background-color: $light;
@@ -37,6 +38,20 @@
   margin-left: auto;
 
   width: 243px !important;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .rightBlock {
+    padding-left: sizeVW(30);
+  }
+
+  .title {
+    margin-top: sizeVW(80);
+  }
+
+  .button {
+    width: sizeVW(243) !important;
+  }
 }
 
 @media screen and (max-width: 1350px) {

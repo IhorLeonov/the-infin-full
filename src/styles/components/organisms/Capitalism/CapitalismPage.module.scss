@@ -1,2 +1,6 @@
 @import '../../../mixins';
 @import '../../../variables';
+@import '../../../functions';
+
+@media screen and (min-width: $largeScreen) {
+}

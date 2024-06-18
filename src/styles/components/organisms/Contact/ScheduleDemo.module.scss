@@ -1,5 +1,6 @@
 @import '../../../variables';
 @import '../../../mixins';
+@import '../../../functions';
 
 .description {
   display: flex;
@@ -35,6 +36,32 @@
   opacity: 0.4;
   margin-top: auto;
   max-width: 520px;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .description {
+    padding-bottom: sizeVW(50);
+    padding-right: sizeVW(14);
+  }
+
+  .title {
+    margin-top: sizeVW(148);
+    margin-bottom: sizeVW(16);
+    max-width: sizeVW(598);
+  }
+
+  .smallTitle {
+    margin-top: sizeVW(60);
+  }
+
+  .rowsListSmall {
+    gap: sizeVW(6);
+    margin-top: sizeVW(12);
+  }
+
+  .bottomText {
+    max-width: sizeVW(520);
+  }
 }
 
 @media screen and (max-width: $maxTablet) {
