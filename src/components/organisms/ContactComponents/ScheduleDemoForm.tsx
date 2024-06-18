@@ -37,6 +37,8 @@ export default function ScheduleDemoForm({
     reset,
   } = useForm<IScheduleDemoForm>();
 
+  console.log(errors);
+
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [error, setError] = useState<string>();
 
