@@ -108,6 +108,18 @@
 
   border-radius: 30px;
   background-color: $light;
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    border-radius: 29px;
+    background-color: #e0e0e0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $dark;
+    border-radius: 29px;
+  }
 }
 
 .chartContainer {
@@ -122,7 +134,7 @@
   border-radius: 24px;
 
   height: 100%;
-  width: 1006px;
+  width: 1000px;
 }
 
 @media screen and (min-width: $largeScreen) {
@@ -206,7 +218,7 @@
 
   .chartBar {
     border-radius: sizeVW(24);
-    width: sizeVW(1006);
+    width: sizeVW(1000);
   }
 }
 

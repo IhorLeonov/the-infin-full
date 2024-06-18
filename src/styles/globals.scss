@@ -12,17 +12,7 @@
 html {
   min-height: 100dvh;
 
-  ::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-    border-radius: 29px;
-    background-color: #e0e0e0;
-  }
 
-  ::-webkit-scrollbar-thumb {
-    background-color: $dark;
-    border-radius: 29px;
-  }
 }
 
 body {
