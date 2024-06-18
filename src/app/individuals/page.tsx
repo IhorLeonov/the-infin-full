@@ -5,6 +5,7 @@ import BottomComponent from '@/components/BottomComponent';
 import HowWorks from '@/components/organisms/IndividualsComponents/HowWorks';
 import Benefits from '@/components/organisms/IndividualsComponents/Benefits';
 import Directing from '@/components/organisms/IndividualsComponents/Directing';
+import Chart from '@/components/organisms/IndividualsComponents/Chart';
 
 interface IndividualsPageProps {}
 
@@ -26,6 +27,7 @@ export default async function IndividualsPage({}: IndividualsPageProps) {
         />
         <HowWorks />
         <Benefits />
+        <Chart />
         <Directing />
       </main>
 
