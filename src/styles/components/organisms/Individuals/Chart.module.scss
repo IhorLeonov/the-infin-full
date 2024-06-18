@@ -1,0 +1,84 @@
+@import '../../../mixins';
+@import '../../../variables';
+@import '../../../functions';
+
+.section {
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+
+.topBlock {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  @include h3;
+  max-width: 375px;
+}
+
+.description {
+  @include p4;
+  max-width: 495px;
+}
+
+.bottomBlock {
+  display: flex;
+  gap: 12px;
+  margin-top: 48px;
+}
+
+.form,
+.chartBlock {
+  border-radius: 30px;
+  background-color: $light;
+}
+
+.form {
+  padding: 40px 30px 12px;
+
+  width: 337px;
+  height: 384px;
+}
+
+.chartBlock {
+  flex-grow: 1;
+  height: 384px;
+}
+
+.formTitle {
+  width: 217px;
+
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 36px;
+}
+
+.smallText {
+  margin-top: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  opacity: 0.4;
+}
+
+.hr {
+  margin-top: 22px;
+  margin-bottom: 22px;
+
+  width: calc(100% + 60px) !important;
+  transform: translateX(-30px);
+  opacity: 0.08 !important;
+}
+
+.label {
+  font-weight: 500;
+
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.input {
+  margin-top: 10px;
+}
