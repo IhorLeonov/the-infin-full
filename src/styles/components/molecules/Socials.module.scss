@@ -1,0 +1,59 @@
+@import '../../functions';
+@import '../../variables';
+@import '../../mixins';
+
+.socials {
+  display: inline-flex;
+  gap: 8px;
+}
+
+.link {
+  @include transition;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+
+  border-radius: 50%;
+  background-color: #f4f4f4;
+
+  &:hover {
+    background-color: $accent;
+  }
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.fbIcon {
+  width: 19px;
+  height: 19px;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .socials {
+    gap: sizeVW(8);
+  }
+
+  .link {
+    width: sizeVW(40);
+    height: sizeVW(40);
+    padding: sizeVW(10);
+  }
+
+  .icon {
+    width: sizeVW(16);
+    height: sizeVW(16);
+  }
+
+  .fbIcon {
+    width: sizeVW(19);
+    height: sizeVW(19);
+  }
+}
