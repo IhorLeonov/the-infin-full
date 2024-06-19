@@ -43,6 +43,34 @@
 }
 
 @media screen and (min-width: $largeScreen) {
+  .section {
+    padding-top: sizeVW(190);
+    padding-bottom: sizeVW(30);
+  }
+
+  .tag {
+    padding: sizeVW(10) sizeVW(16);
+
+    border-radius: sizeVW(8);
+    backdrop-filter: blur(sizeVW(8));
+
+    font-size: sizeVW(12);
+    letter-spacing: sizeVW(0.12);
+  }
+
+  .title {
+    margin-top: sizeVW(26);
+    max-width: sizeVW(1267);
+  }
+
+  .bottomBlock {
+    margin-top: sizeVW(193);
+  }
+
+  .bottomText {
+    font-size: sizeVW(62);
+    letter-spacing: sizeVW(-0.62);
+  }
 }
 
 @media screen and (max-width: $maxMobile) {

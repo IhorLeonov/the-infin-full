@@ -36,8 +36,10 @@
 .plusIcon {
   width: 38px;
   height: 38px;
+  min-width: 38px;
+  min-height: 38px;
 
-  transform: translateY(-30%);
+  transform: translateY(-40%);
 }
 
 .text {
@@ -45,21 +47,51 @@
   margin-top: 188px;
 }
 
-@media screen and (max-width: $maxTablet) {
+@media screen and (min-width: $largeScreen) {
+  .section {
+    padding-top: sizeVW(80);
+    padding-bottom: sizeVW(88);
+  }
+
+  .smallText {
+    max-width: sizeVW(90);
+  }
+
+  .title {
+    max-width: sizeVW(682);
+  }
+
+  .plusIcon {
+    width: sizeVW(38);
+    height: sizeVW(38);
+    min-width: sizeVW(38);
+    min-height: sizeVW(38);
+  }
+
+  .text {
+    margin-top: sizeVW(188);
+  }
+}
+
+@media screen and (max-width: 1300px) {
   .section {
     position: relative;
-    grid-template-columns: 1fr;
   }
-
-  .rightBlock {
-    margin-top: 30px;
-  }
-
   .plusIcon {
     position: absolute;
     right: 30px;
     top: 80px;
     transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: $maxTablet) {
+  .section {
+    grid-template-columns: 1fr;
+  }
+
+  .rightBlock {
+    margin-top: 30px;
   }
 }
 

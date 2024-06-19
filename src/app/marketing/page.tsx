@@ -8,7 +8,7 @@ export default async function MarketingPage({}: MarketingPageProps) {
     <div className={styles.page}>
       <main className={styles.main}>MarketingPage</main>
 
-      <BottomComponent className={styles.bottomComponent} />
+      <BottomComponent />
     </div>
   );
 }
