@@ -54,8 +54,8 @@
 .link {
   @include transition;
 
-  &:hover {
-    color: $light;
+  & :hover {
+    color: $light !important;
   }
 }
 

@@ -18,4 +18,5 @@ export type TypeActiveSection =
   | 'getstarted'
   | 'undefined'
   | 'home-image'
-  | 'discover-image';
+  | 'discover-image'
+  | 'capitalism-image';

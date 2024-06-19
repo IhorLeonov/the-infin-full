@@ -8,7 +8,7 @@ export default async function BlogPage({}: BlogPageProps) {
     <div className={styles.page}>
       <main className={styles.main}>BlogPage</main>
 
-      <BottomComponent />
+      <BottomComponent className={styles.bottomComponent} />
     </div>
   );
 }
