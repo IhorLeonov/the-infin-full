@@ -1,0 +1,96 @@
+@import '../../../mixins';
+@import '../../../variables';
+@import '../../../functions';
+
+.section {
+  padding-top: 80px;
+  background-color: #e8e8e8;
+}
+
+.title {
+  @include h3;
+  max-width: 1256px;
+}
+
+.bottomBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.listTitle {
+  font-size: 16px;
+  line-height: 22px;
+  opacity: 0.5;
+}
+
+.list {
+  margin-top: 16px;
+  padding-left: 14px;
+
+  li {
+    list-style: disc;
+  }
+}
+
+.rightText {
+  margin-left: 30px;
+  width: 561px;
+  opacity: 0.5;
+}
+
+.button {
+  display: block;
+  margin-left: auto;
+  margin-top: 80px;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .section {
+    padding-top: sizeVW(80);
+  }
+
+  .title {
+    max-width: sizeVW(1256);
+  }
+
+  .bottomBlock {
+    margin-top: sizeVW(80);
+  }
+
+  .listTitle {
+    font-size: sizeVW(16);
+    line-height: sizeVW(22);
+  }
+
+  .list {
+    margin-top: sizeVW(16);
+    padding-left: sizeVW(14);
+  }
+
+  .rightText {
+    margin-left: sizeVW(30);
+    width: sizeVW(561);
+  }
+
+  .button {
+    margin-top: sizeVW(80);
+  }
+}
+
+@media screen and (max-width: $maxMobile) {
+  .bottomBlock {
+    display: block;
+    margin-top: 30px;
+  }
+  .rightText {
+    margin-left: 0;
+    margin-top: 30px;
+    width: 100%;
+  }
+  .button {
+    margin-top: 48px;
+    width: 100%;
+  }
+}

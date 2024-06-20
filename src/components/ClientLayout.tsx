@@ -32,7 +32,7 @@ export default function ClientLayout({ children }: ClientLayotProps) {
       case '/blog':
         return light;
       case '/marketing':
-        return dark;
+        return '#050505';
       default:
         return grey;
     }
