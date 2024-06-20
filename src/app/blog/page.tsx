@@ -2,6 +2,8 @@ import Hero from '@/components/organisms/BlogComponents/Hero';
 import styles from '../../styles/components/organisms/Blog/BlogPage.module.scss';
 import BottomComponent from '@/components/BottomComponent';
 import LargeImage from '@/components/organisms/LargeImage';
+import Description from '@/components/organisms/BlogComponents/Description';
+import RelatedPosts from '@/components/organisms/BlogComponents/RelatedPosts';
 
 interface BlogPageProps {}
 
@@ -17,9 +19,11 @@ export default async function BlogPage({}: BlogPageProps) {
           alt="people laugh"
           scale
         />
+        <Description />
+        <RelatedPosts />
       </main>
 
-      <BottomComponent />
+      <BottomComponent className={styles.bottomComponent} />
     </div>
   );
 }

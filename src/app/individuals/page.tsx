@@ -31,7 +31,7 @@ export default async function IndividualsPage({}: IndividualsPageProps) {
         <Directing />
       </main>
 
-      <BottomComponent />
+      <BottomComponent className={styles.bottomComponent} />
     </div>
   );
 }
