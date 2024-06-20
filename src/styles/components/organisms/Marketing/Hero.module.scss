@@ -1,0 +1,151 @@
+@import '../../../mixins';
+@import '../../../variables';
+@import '../../../functions';
+
+.section {
+  padding-top: 191px;
+  padding-bottom: 120px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 10px 16px;
+
+  border-radius: 8px;
+  background: rgba(18, 18, 18, 0.08);
+  backdrop-filter: blur(8px);
+
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0.12px;
+  color: $light;
+}
+
+.title {
+  @include h2;
+  margin-top: 26px;
+  max-width: 713px;
+
+  span {
+    color: $light;
+  }
+}
+
+.topBlock {
+  display: flex;
+  justify-content: space-between;
+}
+
+.imageContainer {
+  max-width: 580px;
+  width: 100%;
+  margin-left: 60px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.bottomBlock {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 51px;
+}
+
+.textBox {
+  margin-left: 30px;
+  max-width: 580px;
+}
+
+.bottomText {
+  margin-top: 16px;
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .section {
+    padding-top: sizeVW(191);
+    padding-bottom: sizeVW(120);
+  }
+
+  .tag {
+    padding: sizeVW(10) sizeVW(16);
+    border-radius: sizeVW(8);
+    backdrop-filter: blur(sizeVW(8));
+
+    font-size: sizeVW(12);
+    letter-spacing: sizeVW(0.12);
+  }
+
+  .title {
+    margin-top: sizeVW(26);
+    max-width: sizeVW(713);
+  }
+
+  .imageContainer {
+    max-width: sizeVW(580);
+    margin-left: sizeVW(60);
+  }
+
+  .bottomBlock {
+    margin-top: sizeVW(51);
+  }
+
+  .textBox {
+    margin-left: sizeVW(30);
+    max-width: sizeVW(580);
+  }
+
+  .bottomText {
+    margin-top: sizeVW(16);
+    font-size: sizeVW(16);
+  }
+}
+
+@media screen and (max-width: $maxTablet) {
+  .section {
+    padding-top: 109px;
+    padding-bottom: 80px;
+  }
+  .topBlock {
+    display: block;
+  }
+  .imageContainer {
+    margin-left: auto;
+    margin-top: 48px;
+  }
+  .bottomBlock {
+    flex-direction: column;
+  }
+  .button {
+    margin-left: auto;
+    margin-top: 40px;
+    order: 1;
+  }
+  .textBox {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: $maxMobile) {
+  .title {
+    margin-top: 20px;
+  }
+  .imageContainer {
+    max-width: 100%;
+    margin-left: 0;
+  }
+  .bottomBlock {
+    margin-top: 30px;
+  }
+  .bottomText {
+    margin-top: 12px;
+  }
+  .button {
+    width: 211px;
+    height: 72px;
+  }
+}
