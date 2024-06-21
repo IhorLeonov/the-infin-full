@@ -2,7 +2,9 @@ import React from 'react';
 import styles from '../../../styles/components/organisms/Marketing/Expected.module.scss';
 
 import { Section } from '@/components/atoms/Section';
+
 import PlusesGrid from '@/components/atoms/PlusesGrid';
+import PlusesSmall from '../../../../public/icons/Marketing/pluses-small.svg';
 
 interface ExpectedProps {}
 
@@ -13,7 +15,8 @@ export default function Expected({}: ExpectedProps) {
         <p className={styles.smallText}>Expected outcomes</p>
 
         <div className={styles.titleBox}>
-          {/* <PlusesGrid className={styles.pluses} /> */}
+          <PlusesGrid className={styles.pluses} />
+          <PlusesSmall className={styles.plusesSmall} />
           <p className={styles.bigText}>
             At the end of the consultancy, you should expect actionable insight
             into improving your organization’s bottom line as well as its return

@@ -4,6 +4,8 @@
 
 .section {
   background-color: $light;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .topBlock {
@@ -12,9 +14,11 @@
 }
 
 .pluses {
-  position: relative;
-  //   top: 300px;
-  transform: translateX(50%);
+  position: absolute;
+  left: 0;
+  top: 100px;
+  transform: translateX(-52%);
+  width: 304px;
 
   svg {
     stroke: $accent !important;
@@ -26,12 +30,14 @@
 }
 
 .titleBox {
-  display: flex;
-  justify-content: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .bigText {
   @include p1;
+  position: relative;
 
   max-width: 600px;
   background-color: $light;
@@ -39,7 +45,138 @@
 }
 
 .list {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   margin-top: 236px;
+
+  li div,
+  li p {
+    padding-left: 30px;
+  }
+}
+
+.list :first-child {
+  div,
+  p {
+    padding-left: 0;
+  }
+}
+
+.plusesSmall {
+  display: none;
+}
+
+.listNumber {
+  border-bottom: 1px solid $darkOpacity;
+
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 566%;
+  letter-spacing: -0.12px;
+}
+
+.listText {
+  margin-top: 26px;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+@media screen and (min-width: $largeScreen) {
+  .section {
+    padding-top: vw(80);
+    padding-bottom: vw(80);
+  }
+
+  .pluses {
+    top: vw(100);
+    width: vw(304);
+  }
+
+  .bigText {
+    max-width: vw(600);
+  }
+
+  .list {
+    margin-top: vw(236);
+  }
+
+  .listNumber {
+    border-bottom: vw(1) solid $darkOpacity;
+
+    font-size: vw(12);
+    letter-spacing: vw(-0.12);
+  }
+
+  .listText {
+    margin-top: vw(26);
+    font-size: vw(16);
+  }
+}
+
+@media screen and (max-width: $maxTablet) {
+  .topBlock {
+    grid-template-columns: 1fr;
+  }
+  .bigText {
+    margin-top: 46px;
+    max-width: 100%;
+    width: 600px;
+  }
+
+  .pluses {
+    top: 130px;
+    transform: translateX(150%);
+  }
+
+  .titleBox {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .list {
+    grid-template-columns: 1fr;
+
+    li div,
+    li p {
+      padding-left: 0;
+    }
+  }
+
+  .list :first-child div {
+    margin-top: 0;
+  }
+
+  .listNumber {
+    line-height: 266.667%;
+    margin-top: 30px;
+  }
+
+  .listText {
+    margin-top: 8px;
+  }
+}
+
+@media screen and (max-width: $maxMobile) {
+  .section {
+    padding-top: 20px;
+    padding-bottom: 48px;
+  }
+  .bigText {
+    max-width: 323px;
+    width: 100%;
+  }
+  .pluses {
+    display: none !important;
+  }
+  .plusesSmall {
+    display: block;
+    z-index: 3;
+    position: absolute;
+    top: 315px;
+    left: 130px;
+  }
+
+  .listNumber {
+    border: none;
+  }
 }
