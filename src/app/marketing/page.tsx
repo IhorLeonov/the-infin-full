@@ -4,6 +4,7 @@ import BottomComponent from '@/components/BottomComponent';
 import HeroDescription from '@/components/organisms/MarketingComponents/HeroDescription';
 import What from '@/components/organisms/MarketingComponents/What';
 import Expected from '@/components/organisms/MarketingComponents/Expected';
+import WeBeginWith from '@/components/organisms/MarketingComponents/WeBeginWith';
 
 interface MarketingPageProps {}
 
@@ -19,6 +20,7 @@ export default async function MarketingPage({}: MarketingPageProps) {
         <div className={styles.bottomBlock}>
           <What />
           <Expected />
+          <WeBeginWith />
         </div>
       </main>
 

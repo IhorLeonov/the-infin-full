@@ -50,3 +50,13 @@
     background-color: $dark;
   }
 }
+
+.accent {
+  color: $dark;
+  background-color: $accent;
+
+  &:hover,
+  &:focus {
+    background-color: $light;
+  }
+}

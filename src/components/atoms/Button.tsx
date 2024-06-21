@@ -6,7 +6,7 @@ import styles from '../../styles/components/atoms/Button.module.scss';
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  appearance: 'primary' | 'ghost' | 'light';
+  appearance: 'primary' | 'ghost' | 'light' | 'accent';
 }
 
 export const Button = ({
@@ -23,6 +23,7 @@ export const Button = ({
           [styles.primary]: appearance === 'primary',
           [styles.ghost]: appearance === 'ghost',
           [styles.light]: appearance === 'light',
+          [styles.accent]: appearance === 'accent',
         },
         className,
       )}

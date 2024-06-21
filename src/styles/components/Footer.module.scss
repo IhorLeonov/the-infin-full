@@ -12,7 +12,7 @@
   padding-left: 18px;
   padding-right: 18px;
 
-  min-height: calc(100vh);
+  min-height: 777px;
 }
 
 .topBlock {
@@ -89,6 +89,8 @@
     padding-top: sizeVW(126);
     padding-left: sizeVW(18);
     padding-right: sizeVW(18);
+
+    min-height: sizeVW(777);
   }
 
   .topBlock {
