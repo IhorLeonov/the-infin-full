@@ -26,6 +26,8 @@
 
 .image {
   margin-top: 113px;
+  width: 321px;
+  height: 310px;
 }
 
 .title {
@@ -80,6 +82,53 @@
   display: none;
 }
 
+@media screen and (min-width: $largeScreen) {
+  .section {
+    padding-top: vw(160);
+    padding-bottom: vw(180);
+  }
+
+  .smallText {
+    max-width: vw(113);
+  }
+
+  .image {
+    margin-top: vw(113);
+    width: vw(321);
+    height: vw(310);
+  }
+
+  .bigText {
+    margin-top: vw(80);
+    max-width: vw(561);
+  }
+
+  .plusIcon {
+    width: vw(39);
+    height: vw(39);
+  }
+
+  .plusesGroup {
+    width: vw(144);
+    height: vw(91);
+  }
+
+  .topPlus {
+    top: vw(160);
+    right: vw(18);
+  }
+
+  .bottomRightPlus {
+    bottom: vw(180);
+    right: vw(18);
+  }
+
+  .plusesGroup {
+    bottom: vw(180);
+    left: vw(18);
+  }
+}
+
 @media screen and (max-width: $maxTablet) {
   .section {
     padding-top: 100px;
@@ -90,7 +139,7 @@
     margin-top: 34px;
   }
   .title {
-    margin-top: 84px;
+    margin-top: 48px;
   }
   .bigText {
     max-width: 100%;
@@ -104,6 +153,7 @@
   .pluses {
     display: flex;
     justify-content: space-between;
+    width: 100%;
   }
 
   .topPlus {

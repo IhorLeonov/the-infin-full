@@ -3,6 +3,7 @@ import styles from '../../styles/components/organisms/Marketing/MarketingPage.mo
 import BottomComponent from '@/components/BottomComponent';
 import HeroDescription from '@/components/organisms/MarketingComponents/HeroDescription';
 import What from '@/components/organisms/MarketingComponents/What';
+import Expected from '@/components/organisms/MarketingComponents/Expected';
 
 interface MarketingPageProps {}
 
@@ -17,6 +18,7 @@ export default async function MarketingPage({}: MarketingPageProps) {
 
         <div className={styles.bottomBlock}>
           <What />
+          <Expected />
         </div>
       </main>
 

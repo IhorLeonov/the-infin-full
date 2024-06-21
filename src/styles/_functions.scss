@@ -2,3 +2,8 @@
   $size: ($n * 100) / 1440;
   @return $size * 1vw;
 }
+// the same with short name
+@function vw($n) {
+  $size: ($n * 100) / 1440;
+  @return $size * 1vw;
+}

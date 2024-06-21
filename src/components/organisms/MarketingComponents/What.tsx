@@ -23,6 +23,7 @@ export default function What({}: WhatProps) {
           width={321}
           height={310}
         />
+
         <div className={styles.pluses}>
           <PlusIcon className={clsx(styles.plusIcon, styles.topPlus)} />
           <PlusIcon className={clsx(styles.plusIcon, styles.leftPlus)} />
@@ -35,7 +36,7 @@ export default function What({}: WhatProps) {
           What is <br />
           <span>The INFIN?</span>
         </h3>
-        
+
         <p className={styles.bigText}>
           The INFIN is a way for employees to continuously and dynamically rate
           each other based on their experience of on-the-job performance. This

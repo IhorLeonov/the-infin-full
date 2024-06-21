@@ -1,0 +1,45 @@
+@import '../../../mixins';
+@import '../../../variables';
+@import '../../../functions';
+
+.section {
+  background-color: $light;
+}
+
+.topBlock {
+  display: grid;
+  grid-template-columns: 113px 1fr;
+}
+
+.pluses {
+  position: relative;
+  //   top: 300px;
+  transform: translateX(50%);
+
+  svg {
+    stroke: $accent !important;
+  }
+}
+
+.smallText {
+  @include p4;
+}
+
+.titleBox {
+  display: flex;
+  justify-content: center;
+}
+
+.bigText {
+  @include p1;
+
+  max-width: 600px;
+  background-color: $light;
+  z-index: 2;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 236px;
+}
