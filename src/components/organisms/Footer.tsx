@@ -4,6 +4,7 @@ import styles from '../../styles/components/Footer.module.scss';
 import ThinksebIcon from '../../../public/icons/thinkseb.svg';
 import AnimatedText from '../molecules/AnimatedText';
 import Logo from '../atoms/Logo';
+import Link from 'next/link';
 
 interface FooterProps {}
 
@@ -22,11 +23,11 @@ export default function Footer({}: FooterProps) {
           <li className={styles.listItem}>
             <h4 className={styles.title}>Pages</h4>
 
-            <a href="#home">Home</a>
-            <a href="#business">For Businesses</a>
-            <a href="#individuals">For Individuals</a>
-            <a href="#reviews">Blog</a>
-            <a href="#getstarted">Marketing&nbsp;Efforts</a>
+            <Link href="/">Home</Link>
+            <Link href="/business">For Businesses</Link>
+            <Link href="/individuals">For Individuals</Link>
+            <Link href="/blog">Blog</Link>
+            <Link href="/marketing">Marketing&nbsp;Efforts</Link>
           </li>
 
           <li className={styles.listItem}>

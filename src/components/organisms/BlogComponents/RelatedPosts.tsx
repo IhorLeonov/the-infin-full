@@ -7,6 +7,7 @@ import { Button } from '@/components/atoms/Button';
 import PostCard from '@/components/molecules/PostCard';
 
 export interface IPost {
+  id: string;
   imageSrc: string;
   title: string;
   description: string;
@@ -16,18 +17,21 @@ interface RelatedPostsProps {}
 
 const posts: IPost[] = [
   {
+    id: '1',
     imageSrc: '/images/Blog/1-post.png',
     title: 'Blog title heading',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.',
   },
   {
+    id: '2',
     imageSrc: '/images/Blog/2-post.png',
     title: 'Blog title heading',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.',
   },
   {
+    id: '3',
     imageSrc: '/images/Blog/3-post.png',
     title: 'Blog title heading',
     description:
@@ -54,7 +58,7 @@ export default function RelatedPosts({}: RelatedPostsProps) {
 
       <ul className={styles.postList}>
         {posts.map((post) => (
-          <li key={post.title}>
+          <li key={post.id}>
             <PostCard {...post} />
           </li>
         ))}
