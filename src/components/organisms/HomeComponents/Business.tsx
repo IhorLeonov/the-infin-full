@@ -45,11 +45,14 @@ export default function Business({ className }: BusinessProps) {
           cardNumber="01"
         />
 
-        <AnimatedLineText
+        {/* <AnimatedLineText
           el="h3"
           text={['The Insufficient Status', 'Quo for Businesses']}
           className={styles.title}
-        />
+        /> */}
+        <h3 className={styles.title}>
+          The Insufficient Status, Quo for Businesses
+        </h3>
 
         <CardDescription
           titleTop="For Employers"

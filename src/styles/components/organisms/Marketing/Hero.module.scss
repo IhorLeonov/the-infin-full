@@ -4,7 +4,7 @@
 
 .section {
   padding-top: 191px;
-  padding-bottom: 120px;
+  padding-bottom: 160px;
 }
 
 .tag {
@@ -63,45 +63,51 @@
   margin-top: 16px;
   font-size: 16px;
   opacity: 0.5;
+  max-width: 574px;
+}
+
+.button:hover {
+  background-color: $light;
 }
 
 @media screen and (min-width: $largeScreen) {
   .section {
-    padding-top: sizeVW(191);
-    padding-bottom: sizeVW(120);
+    padding-top: vw(191);
+    padding-bottom: vw(120);
   }
 
   .tag {
-    padding: sizeVW(10) sizeVW(16);
-    border-radius: sizeVW(8);
-    backdrop-filter: blur(sizeVW(8));
+    padding: vw(10) vw(16);
+    border-radius: vw(8);
+    backdrop-filter: blur(vw(8));
 
-    font-size: sizeVW(12);
-    letter-spacing: sizeVW(0.12);
+    font-size: vw(12);
+    letter-spacing: vw(0.12);
   }
 
   .title {
-    margin-top: sizeVW(26);
-    max-width: sizeVW(713);
+    margin-top: vw(26);
+    max-width: vw(713);
   }
 
   .imageContainer {
-    max-width: sizeVW(580);
-    margin-left: sizeVW(60);
+    max-width: vw(580);
+    margin-left: vw(60);
   }
 
   .bottomBlock {
-    margin-top: sizeVW(51);
+    margin-top: vw(51);
   }
 
   .textBox {
-    margin-left: sizeVW(30);
-    max-width: sizeVW(580);
+    margin-left: vw(30);
+    max-width: vw(580);
   }
 
   .bottomText {
-    margin-top: sizeVW(16);
-    font-size: sizeVW(16);
+    margin-top: vw(16);
+    font-size: vw(16);
+    max-width: vw(574);
   }
 }
 
@@ -147,5 +153,21 @@
   .button {
     width: 211px;
     height: 72px;
+  }
+}
+
+@media screen and (min-width: 461px) and (max-width: $maxMobile) {
+  .title {
+    @include h2;
+    max-width: 443px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .title {
+    max-width: 343px;
+    font-size: 42px;
+    line-height: 100%;
+    letter-spacing: -0.42px;
   }
 }

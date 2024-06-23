@@ -9,7 +9,7 @@
 
 .title {
   @include h3;
-  max-width: 1256px;
+  max-width: 1296px;
 }
 
 .bottomBlock {
@@ -31,6 +31,11 @@
 
   li {
     list-style: disc;
+    margin-top: 4px;
+  }
+
+  &:first-child {
+    margin-top: 0;
   }
 }
 
@@ -46,40 +51,55 @@
   margin-top: 80px;
 }
 
+@media screen and (max-width: 1370px) {
+  .title {
+    max-width: 1000px;
+  }
+}
+
 @media screen and (min-width: $largeScreen) {
   .section {
-    padding-top: sizeVW(80);
+    padding-top: vw(80);
   }
 
   .title {
-    max-width: sizeVW(1256);
+    max-width: vw(1296);
   }
 
   .bottomBlock {
-    margin-top: sizeVW(80);
+    margin-top: vw(80);
   }
 
   .listTitle {
-    font-size: sizeVW(16);
-    line-height: sizeVW(22);
+    font-size: vw(16);
+    line-height: vw(22);
   }
 
   .list {
-    margin-top: sizeVW(16);
-    padding-left: sizeVW(14);
+    margin-top: vw(16);
+    padding-left: vw(14);
+
+    li {
+      margin-top: vw(4);
+    }
   }
 
   .rightText {
-    margin-left: sizeVW(30);
-    width: sizeVW(561);
+    margin-left: vw(30);
+    width: vw(561);
   }
 
   .button {
-    margin-top: sizeVW(80);
+    margin-top: vw(80);
   }
 }
 
 @media screen and (max-width: $maxMobile) {
+  .title {
+    font-size: 28px;
+    line-height: 120%;
+    max-width: 410px;
+  }
   .bottomBlock {
     display: block;
     margin-top: 30px;

@@ -14,8 +14,8 @@ export default async function BlogPage({}: BlogPageProps) {
         <Hero />
         <LargeImage
           sectionName="home-image"
-          mobileImage="/images/blog-mobile.png"
-          desctopImage="/images/blog.png"
+          mobileImage="/images/Blog/blog-mobile.png"
+          desctopImage="/images/Blog/blog.png"
           alt="people laugh"
           scale
         />

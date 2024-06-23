@@ -4,7 +4,6 @@ import React from 'react';
 import styles from '../../../styles/components/organisms/Home/Hero.module.scss';
 
 import Image from 'next/image';
-import PlusesGrid from '../../atoms/PlusesGrid';
 import AnimatedText from '../../molecules/AnimatedText';
 
 import { Section } from '../../atoms/Section';

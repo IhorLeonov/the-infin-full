@@ -3,6 +3,7 @@
 @import '../../../functions';
 
 .section {
+  position: relative;
   background-color: $light;
   padding-top: 80px;
   padding-bottom: 80px;
@@ -81,6 +82,22 @@
   line-height: 130%;
 }
 
+.plusIcon {
+  position: absolute;
+  top: 163px;
+  right: 30px;
+
+  width: 39px;
+  height: 39px;
+
+  stroke: $dark;
+  opacity: 0.12;
+}
+
+.listBr {
+  display: none;
+}
+
 @media screen and (min-width: $largeScreen) {
   .section {
     padding-top: vw(80);
@@ -111,6 +128,14 @@
     margin-top: vw(26);
     font-size: vw(16);
   }
+
+  .plusIcon {
+    top: vw(163);
+    right: vw(30);
+
+    width: vw(39);
+    height: vw(39);
+  }
 }
 
 @media screen and (max-width: $maxTablet) {
@@ -123,9 +148,17 @@
     width: 600px;
   }
 
+  .plusesSmall {
+    position: absolute;
+    display: block;
+    z-index: 3;
+
+    top: 170px;
+    left: 454px;
+  }
+
   .pluses {
-    top: 130px;
-    transform: translateX(150%);
+    display: none !important;
   }
 
   .titleBox {
@@ -154,6 +187,11 @@
   .listText {
     margin-top: 8px;
   }
+
+  .plusIcon {
+    top: 80px;
+    right: 30px;
+  }
 }
 
 @media screen and (max-width: $maxMobile) {
@@ -165,18 +203,48 @@
     max-width: 323px;
     width: 100%;
   }
-  .pluses {
-    display: none !important;
-  }
-  .plusesSmall {
-    display: block;
-    z-index: 3;
-    position: absolute;
-    top: 315px;
-    left: 130px;
-  }
 
+  .plusesSmall {
+    top: 316px;
+    left: 134px;
+  }
   .listNumber {
     border: none;
+  }
+  .plusIcon {
+    top: 20px;
+    right: 18px;
+  }
+
+  .list {
+    & :first-child p {
+      max-width: 290px;
+    }
+    & :nth-child(2) p {
+      max-width: 300px;
+    }
+    & :nth-child(3) p {
+      max-width: 323px;
+    }
+    & :nth-child(4) p {
+      max-width: 280px;
+    }
+    & :nth-child(5) p {
+      max-width: 240px;
+    }
+  }
+  .listBr {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .bigText {
+    max-width: 272px;
+  }
+
+  .plusesSmall {
+    top: 386px;
+    left: 44px;
   }
 }

@@ -35,6 +35,7 @@ export default function ReviewItem({
             height={52}
             alt={name}
             loading="lazy"
+            quality={100}
           />
         </div>
 

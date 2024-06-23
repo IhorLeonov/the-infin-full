@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from '../../../styles/components/organisms/Marketing/What.module.scss';
+import clsx from 'clsx';
 
 import { Section } from '@/components/atoms/Section';
 
 import Image from 'next/image';
 import PlusIcon from '../../../../public/icons/plus.svg';
 import PlusesGroup from '../../../../public/icons/plus-group.svg';
-import clsx from 'clsx';
 
 interface WhatProps {}
 
@@ -22,6 +22,7 @@ export default function What({}: WhatProps) {
           alt="Infin logo"
           width={321}
           height={310}
+          quality={100}
         />
 
         <div className={styles.pluses}>

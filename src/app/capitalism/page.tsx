@@ -17,8 +17,8 @@ export default async function CapitalismPage({}: CapitalismPageProps) {
         <Description />
         <LargeImage
           sectionName="capitalism-image"
-          mobileImage="/images/employees-mobile.png"
-          desctopImage="/images/employees.png"
+          mobileImage="/images/Capitalism/employees-mobile.png"
+          desctopImage="/images/Capitalism/employees.png"
           alt="employees"
           scale
         />

@@ -43,7 +43,7 @@
   z-index: 2;
 
   max-width: 910px;
-  background-color: $grey;
+  // background-color: $grey;
 
   &::selection {
     background: $accent;
@@ -180,6 +180,8 @@
 
   .button {
     width: 211px;
+    height: 72px;
+    margin-right: 0;
   }
 }
 

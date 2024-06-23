@@ -239,10 +239,10 @@ export default function Header({}: HeaderProps) {
 
           <motion.button
             className={clsx(styles.button, {
-              [styles.buttonLightAccent]:
-                activeSection?.includes('reviews') ||
-                activeSection?.includes('home-image') === true,
-              [styles.buttonDarkDark]: activeSection?.includes('getstarted'),
+              // [styles.buttonLightAccent]:
+              //   activeSection?.includes('reviews') ||
+              //   activeSection?.includes('home-image') === true,
+              // [styles.buttonDarkDark]: activeSection?.includes('getstarted'),
               [styles.buttonHidden]: pathname === '/contact',
             })}
             variants={variantsButton}

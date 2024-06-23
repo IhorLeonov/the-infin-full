@@ -41,11 +41,14 @@ export default function Individuals({ className }: IndividualsProps) {
           cardTitle="INDIVIDUALS"
         />
 
-        <AnimatedLineText
+        {/* <AnimatedLineText
           el="h2"
           text={['Fairness and Objective', 'Data for Individuals']}
           className={styles.title}
-        />
+        /> */}
+        <h3 className={styles.title}>
+          Fairness and Objective, Data for Individuals
+        </h3>
 
         <CardDescription
           titleTop="For Business"

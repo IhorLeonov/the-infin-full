@@ -20,7 +20,7 @@ export default function Directing({}: DirectingProps) {
       <div className={styles.imageBox}>
         <Image
           className={styles.image}
-          src="/images/directing-individuals.png"
+          src="/images/Individuals/directing-individuals.png"
           width={537}
           height={687}
           quality={100}

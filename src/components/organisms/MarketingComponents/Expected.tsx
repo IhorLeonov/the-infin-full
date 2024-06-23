@@ -4,7 +4,8 @@ import styles from '../../../styles/components/organisms/Marketing/Expected.modu
 import { Section } from '@/components/atoms/Section';
 
 import PlusesGrid from '@/components/atoms/PlusesGrid';
-import PlusesSmall from '../../../../public/icons/Marketing/pluses-small.svg';
+import PlusesSmall from '/public/icons/pluses-small.svg';
+import PlusesIcon from '/public/icons/plus.svg';
 
 interface ExpectedProps {}
 
@@ -17,6 +18,7 @@ export default function Expected({}: ExpectedProps) {
         <div className={styles.titleBox}>
           <PlusesGrid className={styles.pluses} />
           <PlusesSmall className={styles.plusesSmall} />
+
           <p className={styles.bigText}>
             At the end of the consultancy, you should expect actionable insight
             into improving your organization’s bottom line as well as its return
@@ -34,6 +36,7 @@ export default function Expected({}: ExpectedProps) {
             the right people at the right time.
           </p>
         </li>
+
         <li className={styles.listItem}>
           <div className={styles.listNumber}>02</div>
           <p className={styles.listText}>
@@ -42,6 +45,7 @@ export default function Expected({}: ExpectedProps) {
             their contribution, and helpful feedback for improvement.
           </p>
         </li>
+
         <li className={styles.listItem}>
           <div className={styles.listNumber}>03</div>
           <p className={styles.listText}>
@@ -49,13 +53,15 @@ export default function Expected({}: ExpectedProps) {
             appreciation for each other among team members.
           </p>
         </li>
+
         <li className={styles.listItem}>
           <div className={styles.listNumber}>04</div>
           <p className={styles.listText}>
-            Recognition of true leadership (not just by title) within the
-            organization and building around them.
+            Recognition of true leadership <br className={styles.listBr} /> (not
+            just by title) within the organization and building around them.
           </p>
         </li>
+
         <li className={styles.listItem}>
           <div className={styles.listNumber}>05</div>
           <p className={styles.listText}>
@@ -63,6 +69,7 @@ export default function Expected({}: ExpectedProps) {
           </p>
         </li>
       </ul>
+      <PlusesIcon className={styles.plusIcon} />
     </Section>
   );
 }

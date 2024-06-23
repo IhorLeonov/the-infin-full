@@ -4,7 +4,7 @@
 
 .section {
   margin-top: 120px;
-  margin-bottom: 143px;
+  margin-bottom: 163px;
 }
 
 .container {
@@ -57,45 +57,45 @@
 
 @media screen and (min-width: $largeScreen) {
   .section {
-    margin-top: sizeVW(120);
-    margin-bottom: sizeVW(143);
+    margin-top: vw(120);
+    margin-bottom: vw(163);
   }
 
   .container {
-    max-width: sizeVW(918);
+    max-width: vw(918);
   }
 
   .p {
-    margin-top: sizeVW(24);
+    margin-top: vw(24);
   }
 
   .image {
-    margin-top: sizeVW(60);
+    margin-top: vw(60);
   }
 
   .caption {
-    padding-left: sizeVW(8);
-    margin-top: sizeVW(20);
-    margin-bottom: sizeVW(60);
-    border-left: sizeVW(2) solid $accent;
+    padding-left: vw(8);
+    margin-top: vw(20);
+    margin-bottom: vw(60);
+    border-left: vw(2) solid $accent;
   }
 
   .quote {
     padding-left: 24px;
-    border-left: sizeVW(2) solid $accent;
+    border-left: vw(2) solid $accent;
   }
 
   .bottomTitle {
-    margin-top: sizeVW(120);
+    margin-top: vw(120);
   }
 
   .bottomBlock {
-    margin-top: sizeVW(120);
-    padding-top: sizeVW(40);
+    margin-top: vw(120);
+    padding-top: vw(40);
   }
 
   .socialsText {
-    margin-bottom: sizeVW(16);
+    margin-bottom: vw(16);
   }
 }
 

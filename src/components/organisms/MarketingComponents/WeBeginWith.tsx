@@ -1,12 +1,17 @@
+'use client';
+
 import React from 'react';
 import styles from '../../../styles/components/organisms/Marketing/WeBeginWith.module.scss';
 
 import { Section } from '@/components/atoms/Section';
 import { Button } from '@/components/atoms/Button';
+import { useRouter } from 'next/navigation';
 
 interface WeBeginWithProps {}
 
 export default function WeBeginWith({}: WeBeginWithProps) {
+  const router = useRouter();
+
   return (
     <Section type="ghost" className={styles.section}>
       <p className={styles.underTitle}>Align incentives with impact</p>
@@ -69,9 +74,14 @@ export default function WeBeginWith({}: WeBeginWithProps) {
       </div>
 
       <div className={styles.buttonBox}>
-        <Button className={styles.button} appearance="accent">
+        <Button
+          className={styles.button}
+          appearance="accent"
+          onClick={() => router.push('/contact')}
+        >
           Schedule a call
         </Button>
+
         <p className={styles.buttonText}>
           If you would like to be one of the beta clients of this service,
           please schedule a discovery call.

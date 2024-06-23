@@ -36,6 +36,7 @@
 
   & :first-child p {
     opacity: 1;
+    max-width: 265px;
   }
 }
 
@@ -82,6 +83,10 @@
 
   .list {
     margin-top: vw(255);
+
+    & :first-child p {
+      max-width: vw(265);
+    }
   }
 
   .listItem {

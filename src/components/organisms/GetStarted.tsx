@@ -11,17 +11,17 @@ import { Button } from '../atoms/Button';
 import { CardProps } from '@/lib/types';
 import { motion } from 'framer-motion';
 import { AppContext, IAppContext } from '@/context/app.context';
+import { useRouter } from 'next/navigation';
 
-import girlImage from '../../../public/images/girl.png';
-import boyImage from '../../../public/images/boy.png';
-import PlusesIcon from '../../../public/icons/plus-group.svg';
-import PlusesSmallIcon from '../../../public/icons/pluses-group-small.svg';
+import girlImage from '/public/images/GetStarted/girl.png';
+import boyImage from '/public/images/GetStarted/boy.png';
+import PlusesIcon from '/public/icons/plus-group.svg';
+import PlusesSmallIcon from '/public/icons/pluses-group-small.svg';
 
 import useTargetInView from '@/hooks/useTargetInView';
 import AnimatedLineText from '../molecules/AnimatedLineText';
 import AnimatedText from '../molecules/AnimatedText';
 import useCheckIsMobile from '@/hooks/useCheckIsMobile';
-import { useRouter } from 'next/navigation';
 
 interface GetStartedProps extends CardProps {}
 

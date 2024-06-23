@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import styles from '../../../styles/components/organisms/Marketing/Hero.module.scss';
 
@@ -5,10 +7,13 @@ import { Section } from '@/components/atoms/Section';
 import { Button } from '@/components/atoms/Button';
 
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 interface HeroProps {}
 
 export default function Hero({}: HeroProps) {
+  const router = useRouter();
+
   return (
     <Section type="ghost" className={styles.section}>
       <div className={styles.topBlock}>
@@ -25,6 +30,7 @@ export default function Hero({}: HeroProps) {
             className={styles.image}
             src="/images/Marketing/hero-marketing.png"
             alt="The infin dashboard"
+            quality={100}
             width={573}
             height={370}
           />
@@ -32,14 +38,18 @@ export default function Hero({}: HeroProps) {
       </div>
 
       <div className={styles.bottomBlock}>
-        <Button appearance="primary" className={styles.button}>
+        <Button
+          appearance="primary"
+          className={styles.button}
+          onClick={() => router.push('/contact')}
+        >
           Let&apos;s jump on a call
         </Button>
 
         <div className={styles.textBox}>
           <p className={styles.text}>
-            Which employees have the best (and worst) ROI? Is compensation
-            actually aligned with business outcomes?
+            Which employees have the best (and worst) ROI? <br />
+            Is compensation actually aligned with business outcomes?
           </p>
 
           <p className={styles.bottomText}>

@@ -11,6 +11,9 @@ export interface IPost {
   imageSrc: string;
   title: string;
   description: string;
+  reviewerAvatar: string;
+  reviewerPosition: string;
+  reviewerName: string;
 }
 
 interface RelatedPostsProps {}
@@ -22,6 +25,9 @@ const posts: IPost[] = [
     title: 'Blog title heading',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.',
+    reviewerAvatar: '/images/olivia.png',
+    reviewerPosition: 'Publisher',
+    reviewerName: 'Olivia Johnson',
   },
   {
     id: '2',
@@ -29,6 +35,9 @@ const posts: IPost[] = [
     title: 'Blog title heading',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.',
+    reviewerAvatar: '/images/olivia.png',
+    reviewerPosition: 'Publisher',
+    reviewerName: 'Olivia Johnson',
   },
   {
     id: '3',
@@ -36,6 +45,9 @@ const posts: IPost[] = [
     title: 'Blog title heading',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.',
+    reviewerAvatar: '/images/olivia.png',
+    reviewerPosition: 'Publisher',
+    reviewerName: 'Olivia Johnson',
   },
 ];
 

@@ -11,6 +11,9 @@ interface PostCardProps
   imageSrc: string;
   title: string;
   description: string;
+  reviewerAvatar: string;
+  reviewerPosition: string;
+  reviewerName: string;
 }
 
 export default function PostCard({
@@ -18,6 +21,9 @@ export default function PostCard({
   imageSrc,
   title,
   description,
+  reviewerAvatar,
+  reviewerPosition,
+  reviewerName,
   ...props
 }: PostCardProps) {
   return (
@@ -35,9 +41,9 @@ export default function PostCard({
 
       <Avatar
         className={styles.avatar}
-        imageSrc="/images/olivia.png"
-        position="Publisher"
-        name="Olivia Johnson"
+        imageSrc={reviewerAvatar}
+        position={reviewerPosition}
+        name={reviewerName}
       />
     </div>
   );

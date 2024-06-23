@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from '../../../styles/components/organisms/Blog/Description.module.scss';
-import { Section } from '@/components/atoms/Section';
-import LargeImage from '../LargeImage';
 import clsx from 'clsx';
+
+import { Section } from '@/components/atoms/Section';
+
+import LargeImage from '../LargeImage';
 import Avatar from '@/components/molecules/Avatar';
 import Socials from '@/components/molecules/Socials';
-import { Divider } from '@/components/atoms/Divider';
 
 interface DescriptionProps {}
 
@@ -33,8 +34,8 @@ export default function Description({}: DescriptionProps) {
 
         <LargeImage
           className={styles.image}
-          mobileImage="/images/blog-description-mobile.png"
-          desctopImage="/images/blog-description.png"
+          mobileImage="/images/Blog/description-mobile.png"
+          desctopImage="/images/Blog/description.png"
           alt="work meeting"
           scale={false}
         />

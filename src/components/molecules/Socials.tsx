@@ -16,23 +16,40 @@ interface SocialsProps
 export default function Socials({ className, ...props }: SocialsProps) {
   return (
     <div className={clsx(styles.socials, className)} {...props}>
-      <Link href="https://the-infin-full.vercel.app/" className={styles.link}>
+      <Link
+        href="https://the-infin-full.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.link}
+      >
         <LinkIcon className={styles.icon} />
       </Link>
 
-      <Link href="https://www.linkedin.com/" className={styles.link}>
+      <Link
+        href="https://www.linkedin.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.link}
+      >
         <LinkedinIcon className={styles.icon} />
       </Link>
 
-      <Link href="https://x.com/" className={styles.link}>
+      <Link
+        href="https://x.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.link}
+      >
         <XIcon className={styles.icon} />
       </Link>
 
-      <Link href="https://www.facebook.com/" className={styles.link}>
-        <FacebookIcon
-          className={styles.fbIcon}
-
-        />
+      <Link
+        href="https://www.facebook.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.link}
+      >
+        <FacebookIcon className={styles.fbIcon} />
       </Link>
     </div>
   );

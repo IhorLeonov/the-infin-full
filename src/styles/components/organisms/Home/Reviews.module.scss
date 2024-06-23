@@ -22,10 +22,13 @@
   max-width: 489px;
   color: $light;
 
-  & :nth-child(2) {
-    span :nth-child(2) {
-      color: $accent;
-    }
+  // & :nth-child(2) {
+  //   span :nth-child(2) {
+  //     color: $accent;
+  //   }
+  // }
+  span {
+    color: $accent;
   }
 }
 

@@ -51,7 +51,7 @@ export default function WhyChoose({}: WhyChooseProps) {
                 <motion.div style={{ scale }}>
                   <Image
                     className={styles.image}
-                    src="/images/Home/boys.jpeg"
+                    src="/images/Home/boys.png"
                     width={223}
                     height={223}
                     alt="image of people"
@@ -81,7 +81,7 @@ export default function WhyChoose({}: WhyChooseProps) {
                 <motion.div style={{ scale }}>
                   <Image
                     className={styles.image}
-                    src="/images/Home/two-boys-home.png"
+                    src="/images/Home/two-boys.jpg"
                     width={223}
                     height={223}
                     alt="image of people"

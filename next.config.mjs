@@ -8,7 +8,8 @@ const __dirname = path.dirname(__filename);
 
 const nextConfig = {
   images: {
-    formats: ['image/avif', 'image/webp'],
+    // formats: ['image/avif', 'image/webp'],
+    formats: ['image/webp'],
     remotePatterns: [
       {
         protocol: 'https',

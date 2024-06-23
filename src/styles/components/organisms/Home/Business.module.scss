@@ -26,16 +26,16 @@
 
 @media screen and (min-width: $largeScreen) {
   .section {
-    gap: sizeVW(30);
+    gap: vw(30);
   }
 
   .title {
-    margin-top: sizeVW(36);
-    max-width: sizeVW(668);
+    margin-top: vw(36);
+    max-width: vw(668);
   }
 
   .imageWithButton {
-    max-width: sizeVW(421);
+    max-width: vw(421);
   }
 }
 
@@ -51,5 +51,11 @@
 @media screen and (max-width: 900px) {
   .imageWithButton {
     max-width: 100%;
+  }
+}
+
+@media screen and (max-width: $maxMobile) {
+  .title {
+    max-width: 310px;
   }
 }

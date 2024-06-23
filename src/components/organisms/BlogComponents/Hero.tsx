@@ -3,6 +3,7 @@ import styles from '../../../styles/components/organisms/Blog/Hero.module.scss';
 
 import Socials from '@/components/molecules/Socials';
 import Avatar from '@/components/molecules/Avatar';
+
 import { Section } from '@/components/atoms/Section';
 
 interface HeroProps {}
