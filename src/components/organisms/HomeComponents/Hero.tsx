@@ -27,7 +27,7 @@ export default function Hero({}: HeroProps) {
         <motion.div className={styles.imageContainer}>
           <Image
             className={styles.image}
-            src="/images/hand-phone.png"
+            src="/images/Home/hand-phone.png"
             width={201}
             height={160}
             alt="hand with phone"
@@ -61,7 +61,7 @@ export default function Hero({}: HeroProps) {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 3, delay: 1 }}
           >
-            <PlusesGrid />
+            {/* <PlusesGrid /> */}
           </motion.div>
         </motion.div>
 

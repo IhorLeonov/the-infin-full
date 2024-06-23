@@ -17,6 +17,7 @@
     bottom: 12px;
 
     width: calc(100% - 24px);
+    font-size: 14px;
   }
 }
 
@@ -35,6 +36,7 @@
       bottom: sizeVW(12);
 
       width: calc(100% - sizeVW(24));
+      font-size: sizeVW(14);
     }
   }
 

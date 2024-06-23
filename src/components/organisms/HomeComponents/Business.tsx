@@ -52,7 +52,7 @@ export default function Business({ className }: BusinessProps) {
         />
 
         <CardDescription
-          titleTop="For employers"
+          titleTop="For Employers"
           textMain="It’s hard to evaluate individual contributions in a team
               environment because some employees are more visible. Similarly,
               some employees may take more credit than others. Meanwhile, the
@@ -70,7 +70,7 @@ export default function Business({ className }: BusinessProps) {
 
       <ImageWithButton
         className={styles.imageWithButton}
-        imageSrc="/images/business.png"
+        imageSrc="/images/Home/business.png"
         imageAlt="girl and boy with laptop"
         btnText="THE INFIN FOR BUSINESS"
         onClick={() => router.push('/business')}

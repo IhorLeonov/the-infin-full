@@ -17,8 +17,8 @@ export default async function HomePage({}: HomePageProps) {
         <Hero />
         <LargeImage
           sectionName="home-image"
-          mobileImage="/images/presentation-mobile.png"
-          desctopImage="/images/presentation.png"
+          mobileImage="/images/Home/presentation-mobile.png"
+          desctopImage="/images/Home/presentation.png"
           alt="presentation"
           scale
         />

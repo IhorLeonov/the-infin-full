@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  padding-top: 126px;
+  padding-top: 60px;
   padding-left: 18px;
   padding-right: 18px;
 
@@ -68,6 +68,7 @@
   position: absolute;
   left: 18px;
   bottom: 0;
+  z-index: 2;
 
   display: flex;
   align-items: center;
@@ -86,7 +87,7 @@
 
 @media screen and (min-width: $largeScreen) {
   .footer {
-    padding-top: sizeVW(126);
+    padding-top: sizeVW(60);
     padding-left: sizeVW(18);
     padding-right: sizeVW(18);
 
@@ -128,10 +129,6 @@
 }
 
 @media screen and (max-width: $maxTablet) {
-  .footer {
-    padding-top: 60px;
-  }
-
   .topBlock {
     flex-direction: column;
   }

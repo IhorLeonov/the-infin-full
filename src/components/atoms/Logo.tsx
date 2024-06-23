@@ -2,6 +2,8 @@ import React, { DetailedHTMLProps, HTMLAttributes } from 'react';
 import styles from '../../styles/components/atoms/Logo.module.scss';
 import clsx from 'clsx';
 
+import { useRouter } from 'next/navigation';
+
 export interface LogoProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   fill?: string;
@@ -12,8 +14,15 @@ export default function Logo({
   className,
   ...props
 }: LogoProps) {
+  const router = useRouter();
+
   return (
-    <div id="logo-box" className={clsx(styles.logoBox, className)} {...props}>
+    <div
+      id="logo-box"
+      className={clsx(styles.logoBox, className)}
+      {...props}
+      onClick={() => router.push('/')}
+    >
       <svg
         width="1380"
         height="242"

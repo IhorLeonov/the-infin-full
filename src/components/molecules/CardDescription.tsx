@@ -36,7 +36,7 @@ export default function CardDescription({
       <Divider className={styles.hr} />
 
       <div className={styles.bottomBlock}>
-        <h3 className={styles.bottomTitle}>Use The INFIN’s insights to</h3>
+        <h3 className={styles.bottomTitle}>Use insights from The INFIN to</h3>
 
         <p className={styles.bottomTextLeft}>
           <span>{textTopLeft}</span>

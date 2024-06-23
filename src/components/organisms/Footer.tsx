@@ -49,8 +49,20 @@ export default function Footer({}: FooterProps) {
           <li className={styles.listItem}>
             <h4 className={styles.title}>Contact</h4>
 
-            <a href="">421-273-0427</a>
-            <a href="">info@theinfin.com</a>
+            <Link
+              href="tel:4212730427"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              421-273-0427
+            </Link>
+            <Link
+              href="mailto:info@theinfin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              info@theinfin.com
+            </Link>
           </li>
 
           <li className={styles.listItem}>
@@ -64,13 +76,18 @@ export default function Footer({}: FooterProps) {
         </ul>
       </div>
 
-      <div className={styles.thinkseb}>
+      <Link
+        href="https://www.linkedin.com/company/thinkseb"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.thinkseb}
+      >
         <ThinksebIcon />
         <div className={styles.copyright}>
           <span className={styles.copyrightAccent}>© 2024 • Curated by </span>
           ThinkSeb
         </div>
-      </div>
+      </Link>
 
       <Logo className={styles.logo} />
     </footer>

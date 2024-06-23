@@ -26,7 +26,7 @@ export default function Individuals({ className }: IndividualsProps) {
     >
       <ImageWithButton
         className={styles.imageWithButton}
-        imageSrc="/images/individuals.png"
+        imageSrc="/images/Home/individuals.png"
         imageAlt="girl and boy with laptop"
         btnText="THE INFIN FOR Individuals"
         onClick={() => router.push('/individuals')}

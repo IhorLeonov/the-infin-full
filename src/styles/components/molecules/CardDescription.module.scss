@@ -43,6 +43,10 @@
 
 .bottomTextRight {
   margin-left: 106px;
+
+  & :first-child {
+    max-width: 203px;
+  }
 }
 
 @media screen and (min-width: $largeScreen) {
@@ -78,6 +82,10 @@
 
   .bottomTextRight {
     margin-left: sizeVW(106);
+
+    & :first-child {
+      max-width: sizeVW(203);
+    }
   }
 }
 

@@ -89,6 +89,7 @@
   margin-left: auto;
   align-self: end;
   width: 179px;
+  margin-right: 45px;
 }
 
 @media screen and (min-width: $largeScreen) {
@@ -129,6 +130,7 @@
   .button {
     width: sizeVW(179);
     height: sizeVW(90);
+    margin-right: sizeVW(45);
   }
 }
 

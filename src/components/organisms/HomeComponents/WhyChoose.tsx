@@ -31,7 +31,7 @@ export default function WhyChoose({}: WhyChooseProps) {
       <AnimatedLineText
         className={styles.title}
         el="h3"
-        text={['Why choose', 'the INFIN']}
+        text={['Why choose', 'the INFIN?']}
         once
       />
 
@@ -51,7 +51,7 @@ export default function WhyChoose({}: WhyChooseProps) {
                 <motion.div style={{ scale }}>
                   <Image
                     className={styles.image}
-                    src="/images/boys.jpeg"
+                    src="/images/Home/boys.jpeg"
                     width={223}
                     height={223}
                     alt="image of people"
@@ -81,7 +81,7 @@ export default function WhyChoose({}: WhyChooseProps) {
                 <motion.div style={{ scale }}>
                   <Image
                     className={styles.image}
-                    src="/images/boys-and-girl.jpeg"
+                    src="/images/Home/two-boys-home.png"
                     width={223}
                     height={223}
                     alt="image of people"

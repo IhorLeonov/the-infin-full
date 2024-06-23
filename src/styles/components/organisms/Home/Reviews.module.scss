@@ -43,6 +43,9 @@
   stroke: $light;
   stroke-width: 2.5px;
   opacity: 0.4;
+
+  width: 39px;
+  height: 39px;
 }
 
 .description {
@@ -65,12 +68,6 @@
 }
 
 @media screen and (min-width: $largeScreen) {
-  // .section {
-  //   padding-top: sizeVW(150);
-  //   margin-bottom: sizeVW(130);
-  //   padding-bottom: sizeVW(30);
-  // }
-
   .section {
     padding-bottom: sizeVW(80);
   }
@@ -87,6 +84,8 @@
 
   .plusIcon {
     stroke-width: sizeVW(2.5);
+    width: sizeVW(39);
+    height: sizeVW(39);
   }
 
   .description {

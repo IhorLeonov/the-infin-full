@@ -1,9 +1,6 @@
 @import '../../mixins';
 
 .logoBox {
-  // max-width: 1380px;
-  // max-height: 242px;
-
   width: 100%;
 
   svg {
@@ -13,5 +10,9 @@
 
     width: 100%;
     height: auto;
+  }
+
+  &:hover {
+    @include cursor-pointer;
   }
 }
