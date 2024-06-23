@@ -1,19 +1,22 @@
 import React from 'react';
 import styles from '../../../styles/components/organisms/Individuals/HowWorks.module.scss';
+
+import PlusIcon from '/public/icons/plus.svg';
 import { Section } from '@/components/atoms/Section';
 
 interface HowWorksProps {}
 
 export default function HowWorks({}: HowWorksProps) {
   return (
-    <Section type="filled" className={styles.howWorks}>
+    <Section type="filled" className={styles.section}>
       <div className={styles.topBlock}>
         <p className={styles.smallText}>
           Reputation management is easy with The INFIN
         </p>
 
         <h3 className={styles.title}>
-          How The INFIN <br className={styles.br} /> works is simple
+          <p>How The INFIN </p>
+          <p>works is simple</p>
         </h3>
       </div>
 
@@ -43,6 +46,7 @@ export default function HowWorks({}: HowWorksProps) {
           </p>
         </li>
       </ul>
+      <PlusIcon className={styles.plusIcon} />
     </Section>
   );
 }

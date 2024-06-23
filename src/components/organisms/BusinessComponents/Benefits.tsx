@@ -48,7 +48,7 @@ export default function Benefits({}: BenefitsProps) {
 
         <li className={styles.listItem}>
           <h4 className={styles.smallTitle}>
-            Align your labor spend with your business goals
+            Align your labor <br /> spend with your business goals
           </h4>
           <p className={styles.text}>
             Remember Moneyball? With The INFIN, you may just find out that your

@@ -18,8 +18,11 @@
 
 .title {
   @include h3;
+  max-width: 770px;
+}
 
-  max-width: 802px;
+.text2 {
+  @include p1;
 }
 
 .text,
@@ -39,34 +42,38 @@
   margin-bottom: 160px !important;
 }
 
+.title1br {
+  display: none;
+}
+
 @media screen and (min-width: $largeScreen) {
   .section {
-    padding-bottom: sizeVW(100);
+    padding-bottom: vw(100);
   }
 
   .hrTop {
-    margin-bottom: sizeVW(160) !important;
+    margin-bottom: vw(160) !important;
   }
 
   .title {
-    max-width: sizeVW(802);
+    max-width: vw(770);
   }
 
   .text,
   .smallText {
-    max-width: sizeVW(380);
+    max-width: vw(380);
   }
 
   .smallText {
-    margin-top: sizeVW(65);
+    margin-top: vw(65);
 
-    font-size: sizeVW(14);
-    line-height: sizeVW(18);
+    font-size: vw(14);
+    line-height: vw(18);
   }
 
   .hrMid {
-    margin-top: sizeVW(160);
-    margin-bottom: sizeVW(160) !important;
+    margin-top: vw(160);
+    margin-bottom: vw(160) !important;
   }
 }
 
@@ -106,5 +113,15 @@
 
   .smallText {
     margin-top: 24px;
+  }
+
+  .title2br {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .title1br {
+    display: block;
   }
 }

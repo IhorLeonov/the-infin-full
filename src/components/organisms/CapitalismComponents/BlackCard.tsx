@@ -12,7 +12,7 @@ export default function BlackCard({}: BlackCardProps) {
     <Section type="filled" className={styles.section}>
       <h2 className={styles.title}>
         The INFIN is one of the key tools to help the world move from Capitalism
-        1.0 to <span>Capitalism 2.0</span>
+        1.0 to <br className={styles.br} /> <span>Capitalism 2.0</span>
       </h2>
 
       <div className={styles.bottomBlock}>

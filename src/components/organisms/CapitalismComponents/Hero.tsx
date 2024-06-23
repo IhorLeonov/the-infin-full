@@ -15,7 +15,7 @@ export default function Hero({}: HeroProps) {
       </h2>
 
       <div className={styles.bottomBlock}>
-        <p className={styles.bottomText}>But whose?</p>
+        <p className={styles.bottomText}>But whose future?</p>
         <Button className={styles.button} appearance="primary">
           Schedule a demo
         </Button>

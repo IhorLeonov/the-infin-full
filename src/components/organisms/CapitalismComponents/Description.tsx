@@ -3,6 +3,7 @@ import styles from '../../../styles/components/organisms/Capitalism/Description.
 
 import { Section } from '@/components/atoms/Section';
 import { Divider } from '@/components/atoms/Divider';
+import clsx from 'clsx';
 
 interface DescriptionProps {}
 
@@ -13,8 +14,8 @@ export default function Description({}: DescriptionProps) {
 
       <div className={styles.wrapper}>
         <h3 className={styles.title}>
-          In Capitalism 1.0, the owners of productive assets soak up all the
-          rewards.
+          In Capitalism 1.0, <br className={styles.title1br} /> the owners of
+          productive assets soak up all the rewards.
         </h3>
 
         <div className={styles.textBox}>
@@ -29,12 +30,13 @@ export default function Description({}: DescriptionProps) {
 
       <div className={styles.wrapper}>
         <h3 className={styles.title}>
-          In Capitalism 2.0, those who make the greatest contribution to the
-          collective good are those who receive the greatest rewards.
+          In Capitalism 2.0, those <br className={styles.title2br} /> who make
+          the greatest contribution to the collective good are those who receive
+          the greatest rewa2rds.
         </h3>
 
         <div className={styles.textBox}>
-          <p className={styles.text}>
+          <p className={clsx(styles.text, styles.text2)}>
             This is not to take away the rewards of the high earners but rather
             to reward the high contributors — at any level.
           </p>

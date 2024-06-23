@@ -50,7 +50,10 @@
 .image {
   width: 100%;
   height: auto;
-  border-radius: 6%;
+}
+
+.imageMobile {
+  display: none;
 }
 
 .imageText {
@@ -80,7 +83,7 @@
 .bottomText {
   @include p1;
   margin-top: 154px;
-  max-width: 60%;
+  max-width: 822px;
 }
 
 .bottomTextAccent {
@@ -104,45 +107,46 @@
 
 @media screen and (min-width: $largeScreen) {
   .hero {
-    padding-top: sizeVW(190);
-    padding-bottom: sizeVW(160);
+    padding-top: vw(190);
+    padding-bottom: vw(160);
   }
 
   .title {
-    margin-top: sizeVW(26);
+    margin-top: vw(26);
   }
 
   .imageText {
-    bottom: sizeVW(18);
-    padding: sizeVW(18) sizeVW(10);
+    bottom: vw(18);
+    padding: vw(18) vw(10);
 
-    width: calc(100% - sizeVW(24));
-    border-radius: sizeVW(12);
+    width: calc(100% - vw(24));
+    border-radius: vw(12);
 
-    font-size: sizeVW(18);
-    line-height: sizeVW(18);
+    font-size: vw(18);
+    line-height: vw(18);
 
-    backdrop-filter: blur(sizeVW(8));
+    backdrop-filter: blur(vw(8));
   }
 
   .plusIcon {
-    width: sizeVW(39);
-    height: sizeVW(39);
+    width: vw(39);
+    height: vw(39);
   }
 
   .button {
-    margin-top: sizeVW(71);
+    margin-top: vw(71);
   }
 
   .bottomText {
-    margin-top: sizeVW(154);
+    margin-top: vw(154);
+    max-width: vw(822);
   }
 
   .plusesGrid {
-    top: sizeVW(250);
+    top: vw(250);
 
     svg {
-      stroke-width: sizeVW(1.5) !important;
+      stroke-width: vw(1.5) !important;
     }
   }
 }
@@ -181,6 +185,14 @@
     order: 2;
     margin-top: 80px;
     width: 100%;
+  }
+
+  .imageDesctop {
+    display: none;
+  }
+
+  .imageMobile {
+    display: block;
   }
 
   .bottomText {

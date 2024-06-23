@@ -14,12 +14,21 @@
   margin-top: 12px;
 }
 
+@media screen and (min-width: 1081px) {
+  .hero {
+    padding-bottom: 236px;
+  }
+}
+
 @media screen and (min-width: $largeScreen) {
   .main {
-    gap: sizeVW(12);
+    gap: vw(12);
   }
   .bottomComponent {
-    margin-top: sizeVW(12);
+    margin-top: vw(12);
+  }
+  .hero {
+    padding-bottom: vw(236);
   }
 }
 

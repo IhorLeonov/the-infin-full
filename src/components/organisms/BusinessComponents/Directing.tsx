@@ -20,7 +20,7 @@ export default function Directing({}: DirectingProps) {
       <div className={styles.imageContainer}>
         <Image
           className={styles.image}
-          src="/images/directing-business.png"
+          src="/images/Business/directing.png"
           width={537}
           height={687}
           alt="Boys are working with laptops"
@@ -33,7 +33,7 @@ export default function Directing({}: DirectingProps) {
         </p>
 
         <h3 className={styles.title}>
-          Using The <span className={styles.titleAccent}>INFIN gives</span> you
+          Using <span className={styles.titleAccent}>The INFIN </span>gives you
           access to the data most leaders dream about.
         </h3>
 

@@ -27,6 +27,7 @@
 .title {
   @include h3;
   margin-top: 80px;
+  max-width: 770px;
 
   span {
     color: $accent;
@@ -40,17 +41,22 @@
   width: 243px !important;
 }
 
+.br {
+  display: none;
+}
+
 @media screen and (min-width: $largeScreen) {
   .rightBlock {
-    padding-left: sizeVW(30);
+    padding-left: vw(30);
   }
 
   .title {
-    margin-top: sizeVW(80);
+    margin-top: vw(80);
+    max-width: vw(770);
   }
 
   .button {
-    width: sizeVW(243) !important;
+    width: vw(243) !important;
   }
 }
 
@@ -85,5 +91,11 @@
   .button {
     margin-left: 0;
     width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .br {
+    display: block;
   }
 }

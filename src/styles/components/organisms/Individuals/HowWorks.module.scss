@@ -2,7 +2,8 @@
 @import '../../../variables';
 @import '../../../functions';
 
-.howWorks {
+.section {
+  position: relative;
   padding-top: 80px;
   padding-bottom: 80px;
   background-color: $light;
@@ -15,15 +16,12 @@
 
 .smallText {
   @include p4;
+  width: 131px;
 }
 
 .title {
   @include h3;
   text-align: center;
-
-  br {
-    display: none;
-  }
 }
 
 .list {
@@ -60,28 +58,52 @@
   opacity: 0.4;
 }
 
+.plusIcon {
+  position: absolute;
+  top: 163px;
+  right: 30px;
+
+  width: 39px;
+  height: 39px;
+
+  stroke: $dark;
+  opacity: 0.12;
+}
+
 @media screen and (min-width: $largeScreen) {
-  .howWorks {
-    padding-top: sizeVW(80);
-    padding-bottom: sizeVW(80);
+  .smallText {
+    width: vw(131);
+  }
+
+  .section {
+    padding-top: vw(80);
+    padding-bottom: vw(80);
   }
 
   .list {
-    margin-top: sizeVW(255);
+    margin-top: vw(255);
   }
 
   .listItem {
-    max-width: sizeVW(286);
+    max-width: vw(286);
   }
 
   .listItemNumber {
-    font-size: sizeVW(88);
-    letter-spacing: sizeVW(-0.88);
-    padding-bottom: sizeVW(10);
+    font-size: vw(88);
+    letter-spacing: vw(-0.88);
+    padding-bottom: vw(10);
   }
 
   .listItemText {
-    padding-top: sizeVW(24);
+    padding-top: vw(24);
+  }
+
+  .plusIcon {
+    width: vw(39);
+    height: vw(39);
+
+    top: vw(163);
+    right: vw(30);
   }
 }
 
@@ -108,5 +130,22 @@
 
   .listItem {
     max-width: 100%;
+  }
+
+  .plusIcon {
+    top: 80px;
+    right: vw(30);
+  }
+}
+
+@media screen and (max-width: $maxMobile) {
+  .section {
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+
+  .plusIcon {
+    top: 20px;
+    right: 18px;
   }
 }

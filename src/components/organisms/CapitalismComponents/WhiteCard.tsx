@@ -11,7 +11,7 @@ export default function WhiteCard({}: WhiteCardProps) {
   return (
     <Section type="filled" className={styles.section}>
       <div className={styles.leftBlock}>
-        <p className={styles.smallText}>Designed for real meritocracy</p>
+        <p className={styles.smallText}>Aligns reward with contribution</p>
       </div>
 
       <div className={styles.rightBlock}>

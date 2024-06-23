@@ -1,17 +1,20 @@
 'use client';
 
-import React from 'react';
+import React, { DetailedHTMLProps, HTMLAttributes } from 'react';
 import styles from '../../styles/components/LargeHero.module.scss';
+import clsx from 'clsx';
 
 import { Section } from '@/components/atoms/Section';
 import { Button } from '@/components/atoms/Button';
+import { useRouter } from 'next/navigation';
 
 import Image from 'next/image';
 import PlusIcon from '../../../public/icons/plus.svg';
-import PlusesGrid from '../atoms/PlusesGrid';
-import { useRouter } from 'next/navigation';
+// import PlusesGrid from '../atoms/PlusesGrid';
 
-interface LargeHeroProps {
+interface LargeHeroProps
+  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+  className?: string;
   pluses?: boolean;
   imageText?: boolean;
   text: string;
@@ -21,25 +24,29 @@ interface LargeHeroProps {
   bottomTextFirst: string;
   bottomTextSecond: string;
   imageSrc: string;
+  imageMobileSrc: string;
   imageAlt: string;
 }
 
 export default function LargeHero({
+  text,
   pluses,
   imageText,
-  text,
   titleFirstRow,
   titleSecondRow,
   bottomTextAccent,
   bottomTextFirst,
   bottomTextSecond,
   imageSrc,
+  imageMobileSrc,
   imageAlt,
+  className,
+  ...props
 }: LargeHeroProps) {
   const router = useRouter();
 
   return (
-    <Section className={styles.hero} type="ghost">
+    <Section className={clsx(styles.hero, className)} type="ghost" {...props}>
       <div className={styles.topBlock}>
         <div className={styles.leftBlock}>
           <PlusIcon className={styles.plusIcon} />
@@ -61,8 +68,18 @@ export default function LargeHero({
               width={297}
               height={450}
               priority
+              quality={100}
               alt={imageAlt}
-              className={styles.image}
+              className={clsx(styles.image, styles.imageDesctop)}
+            />
+            <Image
+              src={imageMobileSrc}
+              width={297}
+              height={450}
+              priority
+              quality={100}
+              alt={imageAlt}
+              className={clsx(styles.image, styles.imageMobile)}
             />
             {imageText && (
               <p className={styles.imageText}>No respect. No respect at all.</p>
@@ -87,7 +104,7 @@ export default function LargeHero({
         {bottomTextSecond}
       </p>
 
-      {pluses && <PlusesGrid className={styles.plusesGrid} />}
+      {/* {pluses && <PlusesGrid className={styles.plusesGrid} />} */}
     </Section>
   );
 }

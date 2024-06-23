@@ -12,17 +12,19 @@
 
   margin-top: 148px;
   margin-bottom: 16px;
+  max-width: 460px;
 }
 
 @media screen and (min-width: $largeScreen) {
   .description {
-    padding-bottom: sizeVW(50);
-    padding-right: sizeVW(14);
+    padding-bottom: vw(50);
+    padding-right: vw(14);
   }
 
   .title {
-    margin-top: sizeVW(148);
-    margin-bottom: sizeVW(16);
+    margin-top: vw(148);
+    margin-bottom: vw(16);
+    max-width: vw(460);
   }
 }
 
@@ -34,5 +36,6 @@
 
   .title {
     margin-top: 40px;
+    max-width: 323px;
   }
 }

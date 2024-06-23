@@ -123,8 +123,11 @@
 }
 
 @media screen and (max-width: $maxMobile) {
+  .wrapper {
+    margin-top: 16px;
+  }
   .bigText {
-    max-width: 100%;
+    max-width: 343px;
   }
   .rightBlock {
     flex-direction: column;

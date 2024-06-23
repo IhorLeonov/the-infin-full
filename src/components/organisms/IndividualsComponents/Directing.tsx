@@ -23,6 +23,7 @@ export default function Directing({}: DirectingProps) {
           src="/images/directing-individuals.png"
           width={537}
           height={687}
+          quality={100}
           alt="Boys are working with laptops"
         />
       </div>
@@ -33,8 +34,9 @@ export default function Directing({}: DirectingProps) {
         </p>
 
         <h3 className={styles.title}>
-          <span className={styles.titleAccent}>It’s time for you</span> to be
-          seen, appreciated, and rewarded for your contributions.
+          <span className={styles.titleAccent}>It’s time for you</span>{' '}
+          <br className={styles.br} /> to be seen, appreciated, and rewarded for
+          your contributions.
           <br />
           <br />
           And if not, you can take your profile to someplace that will.

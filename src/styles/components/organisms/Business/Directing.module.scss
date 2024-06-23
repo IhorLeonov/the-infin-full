@@ -10,13 +10,12 @@
 }
 
 .imageContainer {
-  width: 537px;
-  height: 687px;
+  max-width: 537px;
 }
 
 .image {
   width: 100% !important;
-  height: auto !important;
+  height: 100% !important;
 }
 
 .rightBlock {
@@ -59,8 +58,8 @@
   }
 
   .imageContainer {
+    max-width: 100%;
     width: sizeVW(537);
-    height: sizeVW(687);
   }
 }
 
@@ -82,6 +81,10 @@
   }
   .button {
     margin-top: 48px;
+  }
+
+  .imageContainer {
+    max-width: 100%;
   }
 }
 

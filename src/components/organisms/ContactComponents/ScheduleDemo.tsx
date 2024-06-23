@@ -6,7 +6,10 @@ interface ScheduleDemoProps {}
 export default function ScheduleDemo({}: ScheduleDemoProps) {
   return (
     <div className={styles.description}>
-      <h3 className={styles.title}>Unlock the full potential of your team</h3>
+      <h3 className={styles.title}>
+        Unlock the <br className={styles.titlebBr} /> full potential of your
+        team
+      </h3>
 
       <ul className={styles.rowList}>
         <li>Ready to experience the power of The INFIN?</li>

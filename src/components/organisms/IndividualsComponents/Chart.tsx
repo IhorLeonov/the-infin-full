@@ -34,7 +34,9 @@ export default function Chart({}: ChartProps) {
   return (
     <Section type="ghost" className={styles.section}>
       <div className={styles.topBlock}>
-        <h3 className={styles.title}>The INFIN gets you seen</h3>
+        <h3 className={styles.title}>
+          The INFIN <br /> gets you seen
+        </h3>
         <p className={styles.description}>
           Few things are more demotivating than not being seen for all the good
           things you do. With The INFIN’s data, your work contributions will be

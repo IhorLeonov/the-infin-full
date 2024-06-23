@@ -43,6 +43,10 @@
   color: $light;
 }
 
+.br {
+  display: none;
+}
+
 @media screen and (min-width: $largeScreen) {
   .section {
     padding-top: sizeVW(80);
@@ -68,6 +72,12 @@
 
   .text {
     max-width: sizeVW(368);
+  }
+}
+
+@media screen and (max-width: $maxTablet) {
+  .br {
+    display: block;
   }
 }
 

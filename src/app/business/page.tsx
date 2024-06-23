@@ -29,7 +29,8 @@ export default async function BusinessPage({}: BusinessPageProps) {
               employee’s “vote” based on how others rank them. As a result, you get an
               accurate picture of which employees are driving your success and of the
               strengths and weaknesses of each employee."
-            imageSrc="/images/business-hero.jpg"
+            imageSrc="/images/Business/hero.jpg"
+            imageMobileSrc="/images/Business/hero-mobile.png"
             imageAlt="girl is doing presentation"
           />
           <Benefits />

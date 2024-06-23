@@ -18,8 +18,11 @@
 }
 
 .description {
-  @include p4;
   max-width: 495px;
+
+  font-size: 14px;
+  line-height: 128.571%;
+  opacity: 0.4;
 }
 
 .bottomBlock {
@@ -139,86 +142,87 @@
 
 @media screen and (min-width: $largeScreen) {
   .section {
-    padding-top: sizeVW(160);
-    padding-bottom: sizeVW(160);
+    padding-top: vw(160);
+    padding-bottom: vw(160);
   }
 
   .title {
-    max-width: sizeVW(375);
+    max-width: vw(375);
   }
 
   .description {
-    max-width: sizeVW(495);
+    max-width: vw(495);
+    font-size: vw(14);
   }
 
   .bottomBlock {
-    gap: sizeVW(12);
-    margin-top: sizeVW(48);
+    gap: vw(12);
+    margin-top: vw(48);
   }
 
   .form {
-    border-radius: sizeVW(30) sizeVW(30) sizeVW(48) sizeVW(48);
-    padding: sizeVW(12);
+    border-radius: vw(30) vw(30) vw(48) vw(48);
+    padding: vw(12);
 
-    width: sizeVW(337);
-    min-width: sizeVW(337);
+    width: vw(337);
+    min-width: vw(337);
   }
 
   .container {
-    padding: sizeVW(28) sizeVW(18) 0;
+    padding: vw(28) vw(18) 0;
   }
 
   .formTitle {
-    width: sizeVW(217);
-    font-size: sizeVW(32);
-    line-height: sizeVW(36);
+    width: vw(217);
+    font-size: vw(32);
+    line-height: vw(36);
   }
 
   .smallText {
-    margin-top: sizeVW(10);
-    font-size: sizeVW(16);
-    line-height: sizeVW(16);
+    margin-top: vw(10);
+    font-size: vw(16);
+    line-height: vw(16);
   }
 
   .hr {
-    margin-top: sizeVW(22);
-    margin-bottom: sizeVW(20) !important;
+    margin-top: vw(22);
+    margin-bottom: vw(20) !important;
   }
 
   .label {
-    font-size: sizeVW(12);
-    line-height: sizeVW(12);
+    font-size: vw(12);
+    line-height: vw(12);
   }
 
   .input {
-    margin-top: sizeVW(10);
+    margin-top: vw(10);
   }
 
   .input input {
-    padding-left: sizeVW(32);
+    padding-left: vw(32);
   }
 
   .input::after {
-    top: sizeVW(13);
-    left: sizeVW(16);
+    top: vw(13);
+    left: vw(16);
 
-    font-size: sizeVW(16);
-    line-height: sizeVW(22);
+    font-size: vw(16);
+    line-height: vw(22);
   }
 
   .buttonSubmit {
-    margin-top: sizeVW(30);
-    border: sizeVW(1.5) solid $darkOpacity;
+    margin-top: vw(30);
+    border: vw(1.5) solid $darkOpacity;
   }
 
   .chart {
-    padding: sizeVW(12);
-    border-radius: sizeVW(30);
+    padding: vw(12);
+    border-radius: vw(30);
   }
 
   .chartBar {
-    border-radius: sizeVW(24);
-    width: sizeVW(1000);
+    border-radius: vw(24);
+    width: vw(1000);
   }
 }
 
