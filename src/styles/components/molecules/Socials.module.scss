@@ -19,11 +19,13 @@
   padding: 10px;
 
   border-radius: 50%;
-  background-color: #f4f4f4;
+  background-color: #f4f4f4 !important;
 
   &:hover {
-    background-color: $accent;
+    background-color: $accent !important;
   }
+
+  cursor: url('/icons/cursor-pointer.svg'), pointer !important;
 }
 
 .icon {
@@ -38,22 +40,22 @@
 
 @media screen and (min-width: $largeScreen) {
   .socials {
-    gap: sizeVW(8);
+    gap: vw(8);
   }
 
   .link {
-    width: sizeVW(40);
-    height: sizeVW(40);
-    padding: sizeVW(10);
+    width: vw(40);
+    height: vw(40);
+    padding: vw(10);
   }
 
   .icon {
-    width: sizeVW(16);
-    height: sizeVW(16);
+    width: vw(16);
+    height: vw(16);
   }
 
   .fbIcon {
-    width: sizeVW(19);
-    height: sizeVW(19);
+    width: vw(19);
+    height: vw(19);
   }
 }
