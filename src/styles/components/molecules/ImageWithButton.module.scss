@@ -29,18 +29,29 @@
 
 @media screen and (min-width: $largeScreen) {
   .wrapper {
-    border-radius: sizeVW(20);
+    border-radius: vw(20);
 
     & .button {
-      left: sizeVW(12);
-      bottom: sizeVW(12);
+      left: vw(12);
+      bottom: vw(12);
 
-      width: calc(100% - sizeVW(24));
-      font-size: sizeVW(14);
+      width: calc(100% - vw(24));
+      font-size: vw(14);
     }
   }
 
   .image {
-    border-radius: sizeVW(20);
+    border-radius: vw(20);
+  }
+}
+
+@media screen and (max-width: $maxTablet) {
+  .button {
+    background-color: $accent;
+    color: $dark;
+
+    &:hover {
+      background-color: $light;
+    }
   }
 }

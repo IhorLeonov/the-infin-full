@@ -7,11 +7,10 @@ import clsx from 'clsx';
 import { Section } from '../../atoms/Section';
 import { CardTitle } from '../../molecules/CardTitle';
 import { CardProps } from '@/lib/types';
+import { useRouter } from 'next/navigation';
 
 import ImageWithButton from '../../molecules/ImageWithButton';
-import AnimatedLineText from '../../molecules/AnimatedLineText';
 import CardDescription from '@/components/molecules/CardDescription';
-import { useRouter } from 'next/navigation';
 
 interface IndividualsProps extends CardProps {}
 

@@ -39,13 +39,13 @@ export default function CardDescription({
         <h3 className={styles.bottomTitle}>Use insights from The INFIN to</h3>
 
         <p className={styles.bottomTextLeft}>
-          <span>{textTopLeft}</span>
-          <span>{textBottomLeft}</span>
+          <span className={styles.textTopLeft}>{textTopLeft}</span>
+          <span className={styles.textBottomLeft}>{textBottomLeft}</span>
         </p>
 
         <p className={styles.bottomTextRight}>
-          <span>{textTopRight}</span>
-          <span>{textBottomRight}</span>
+          <span className={styles.textTopRight}>{textTopRight}</span>
+          <span className={styles.textBottomRight}>{textBottomRight}</span>
         </p>
       </div>
     </div>
