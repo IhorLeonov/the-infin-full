@@ -51,40 +51,40 @@
 
 @media screen and (min-width: $largeScreen) {
   .cardDescription {
-    margin-top: sizeVW(40);
+    margin-top: vw(40);
   }
 
   .topBlock {
-    padding-bottom: sizeVW(60);
+    padding-bottom: vw(60);
   }
 
   .topTitle,
   .bottomTitle {
     @include p4;
-    min-width: sizeVW(88);
-    width: sizeVW(88);
-    margin-right: sizeVW(34);
+    min-width: vw(88);
+    width: vw(88);
+    margin-right: vw(34);
   }
 
   .hr {
-    width: calc(100% + sizeVW(30)) !important;
+    width: calc(100% + vw(30)) !important;
   }
 
   .bigText {
-    max-width: sizeVW(668);
+    max-width: vw(668);
   }
 
   .bottomTextLeft,
   .bottomTextRight {
-    gap: sizeVW(12);
-    max-width: sizeVW(223);
+    gap: vw(12);
+    max-width: vw(223);
   }
 
   .bottomTextRight {
-    margin-left: sizeVW(106);
+    margin-left: vw(106);
 
     & :first-child {
-      max-width: sizeVW(203);
+      max-width: vw(203);
     }
   }
 }
