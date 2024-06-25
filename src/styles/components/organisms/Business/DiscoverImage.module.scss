@@ -26,6 +26,10 @@
   display: none;
 }
 
+.player {
+  max-width: 60vw;
+}
+
 @media screen and (max-width: $maxTablet) {
   .imageDesc {
     display: none;
@@ -33,6 +37,16 @@
 
   .imageMob {
     display: block;
+  }
+
+  .discoverImage {
+    min-height: calc(((630 * 100) / 375) * 1vw);
+  }
+
+  .player {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
