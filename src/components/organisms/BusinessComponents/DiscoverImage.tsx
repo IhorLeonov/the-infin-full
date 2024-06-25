@@ -12,7 +12,7 @@ import Modal from '@/components/atoms/Modal';
 interface DiscoverImageProps {}
 
 export default function DiscoverImage({}: DiscoverImageProps) {
-  const [modalActive, setModalActive] = useState(true);
+  const [modalActive, setModalActive] = useState(false);
   let videosrc = '/videos/business-video.mp4';
 
   useEffect(() => {
