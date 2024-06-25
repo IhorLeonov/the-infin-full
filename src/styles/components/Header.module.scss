@@ -102,21 +102,21 @@
     max-width: 100%;
   }
   .topBlock {
-    padding: sizeVW(30) sizeVW(30) 0 sizeVW(30);
+    padding: vw(30) vw(30) 0 vw(30);
   }
   .logo {
-    max-width: sizeVW(514);
+    max-width: vw(514);
   }
   .nav {
-    padding-left: sizeVW(32);
-    padding-bottom: sizeVW(6);
+    padding-left: vw(32);
+    padding-bottom: vw(6);
   }
   .button {
-    margin-right: sizeVW(46);
-    width: sizeVW(177);
-    height: sizeVW(90);
+    margin-right: vw(46);
+    width: vw(177);
+    height: vw(90);
 
-    border-width: sizeVW(1);
+    border-width: vw(1);
   }
 }
 

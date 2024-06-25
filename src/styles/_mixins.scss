@@ -8,7 +8,7 @@
     padding: 0 10px;
   }
   @media screen and (min-width: $largeScreen) {
-    padding: 0 sizeVW(12);
+    padding: 0 vw(12);
   }
 }
 
@@ -24,7 +24,7 @@
     font-size: 76px;
   }
   @media screen and (min-width: $largeScreen) {
-    font-size: sizeVW(120);
+    font-size: vw(120);
   }
 }
 
@@ -40,7 +40,7 @@
     font-size: 52px;
   }
   @media screen and (min-width: $largeScreen) {
-    font-size: sizeVW(88);
+    font-size: vw(88);
   }
 }
 
@@ -56,7 +56,7 @@
     letter-spacing: -0.42px;
   }
   @media screen and (min-width: $largeScreen) {
-    font-size: sizeVW(62);
+    font-size: vw(62);
   }
 }
 
@@ -72,7 +72,7 @@
     font-size: 28px;
   }
   @media screen and (min-width: $largeScreen) {
-    font-size: sizeVW(32);
+    font-size: vw(32);
   }
 }
 
@@ -88,7 +88,7 @@
     font-size: 28px;
   }
   @media screen and (min-width: $largeScreen) {
-    font-size: sizeVW(32);
+    font-size: vw(32);
   }
 }
 
@@ -99,7 +99,7 @@
   letter-spacing: 0%;
 
   @media screen and (min-width: $largeScreen) {
-    font-size: sizeVW(20);
+    font-size: vw(20);
   }
 }
 
@@ -110,7 +110,7 @@
   letter-spacing: 0%;
 
   @media screen and (min-width: $largeScreen) {
-    font-size: sizeVW(14);
+    font-size: vw(14);
   }
 }
 
@@ -123,7 +123,7 @@
   opacity: 0.4;
 
   @media screen and (min-width: $largeScreen) {
-    font-size: sizeVW(12);
+    font-size: vw(12);
   }
 }
 
@@ -144,15 +144,15 @@
   transition: all 0.4s;
 
   @media screen and (min-width: $largeScreen) {
-    padding: sizeVW(12);
+    padding: vw(12);
 
-    width: sizeVW(223);
-    height: sizeVW(90);
+    width: vw(223);
+    height: vw(90);
 
-    border-radius: sizeVW(129);
-    border-width: sizeVW(1);
-    font-size: sizeVW(12);
-    letter-spacing: sizeVW(0.24);
+    border-radius: vw(129);
+    border-width: vw(1);
+    font-size: vw(12);
+    letter-spacing: vw(0.24);
   }
 }
 

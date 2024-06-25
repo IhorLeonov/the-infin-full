@@ -22,7 +22,10 @@ export default function HowWorks({}: HowWorksProps) {
 
       <ul className={styles.list}>
         <li className={styles.listItem}>
-          <div className={styles.listItemNumber}>01</div>
+          <div className={styles.listItemNumber}>
+            01
+            <hr className={styles.hr} />
+          </div>
           <p className={styles.listItemText}>
             You rate other employees and they rank you, regularly updating for
             good and poor work experiences with them.

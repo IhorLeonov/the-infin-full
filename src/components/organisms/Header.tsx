@@ -17,6 +17,7 @@ import useTargetInView from '@/hooks/useTargetInView';
 import ButtonMenu from '../atoms/ButtonMenu';
 import PlusIcon from '../../../public/icons/plus.svg';
 import Link from 'next/link';
+import { calcVwToPx } from '@/lib/helpers';
 
 interface HeaderProps {}
 
@@ -26,6 +27,7 @@ export default function Header({}: HeaderProps) {
   const router = useRouter();
   const pathname = usePathname();
   const targetRef = useRef(null);
+  const viewport = document.documentElement.clientWidth;
 
   const { isInView } = useTargetInView(targetRef);
   const { activeSection } = useContext(AppContext) as IAppContext;
@@ -55,21 +57,32 @@ export default function Header({}: HeaderProps) {
   };
 
   const variantsLogo: Variants = {
-    // short: { maxWidth: 285 },
-    // large: { maxWidth: 514 },
+    short: {
+      maxWidth: viewport > 1440 ? calcVwToPx(285) : 285,
+    },
+    large: {
+      maxWidth: viewport > 1440 ? calcVwToPx(514) : 514,
+    },
   };
 
   const variantsButton: Variants = {
     short: {
-      // height: 50,
-      // width: 130,
+      height: viewport > 1440 ? calcVwToPx(50) : 50,
+      width: viewport > 1440 ? calcVwToPx(130) : 130,
+    },
+    large: {
+      height: viewport > 1440 ? calcVwToPx(90) : 90,
+      width: viewport > 1440 ? calcVwToPx(177) : 177,
     },
   };
 
   const variantsLink = (column: number): Variants => {
     return {
-      // short: { marginRight: 24, gridColumn: column },
-      // large: { gridColumn: 5 },
+      short: {
+        marginRight: viewport > 1440 ? calcVwToPx(24) : 24,
+        gridColumn: column,
+      },
+      large: { gridColumn: 5 },
     };
   };
 
@@ -246,7 +259,7 @@ export default function Header({}: HeaderProps) {
               [styles.buttonHidden]: pathname === '/contact',
             })}
             variants={variantsButton}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 0.2 }}
             onClick={onToContactClick}
           >
             Contact

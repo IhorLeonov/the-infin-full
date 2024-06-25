@@ -36,7 +36,6 @@
 
   & :first-child p {
     opacity: 1;
-    max-width: 265px;
   }
 }
 
@@ -72,6 +71,10 @@
 }
 
 @media screen and (min-width: $largeScreen) {
+  .topBlock {
+    grid-template-columns: vw(131) 1fr;
+  }
+
   .smallText {
     width: vw(131);
   }
@@ -85,7 +88,7 @@
     margin-top: vw(255);
 
     & :first-child p {
-      max-width: vw(265);
+      max-width: vw(265) !important;
     }
   }
 
@@ -110,6 +113,33 @@
     top: vw(163);
     right: vw(30);
   }
+
+  .hr {
+    width: calc(100vw - (vw(265) + vw(60) + vw(24)));
+    bottom: vw(-1);
+    left: vw(265);
+    height: vw(1);
+  }
+}
+
+@media screen and (min-width: 1081px) {
+  .list {
+    & :first-child p {
+      max-width: 265px;
+    }
+    & :first-child div {
+      position: relative;
+    }
+  }
+  .hr {
+    width: calc(100vw - (265px + 60px + 24px));
+    position: absolute;
+    bottom: -1px;
+    left: 265px;
+    background-color: $darkOpacity;
+    height: 1px;
+    border: none;
+  }
 }
 
 @media screen and (max-width: $maxTablet) {
@@ -127,6 +157,21 @@
     flex-direction: column;
     justify-content: flex-start;
     gap: 48px;
+
+    li div {
+      border-bottom: 1px solid $darkOpacity;
+    }
+
+    li p {
+      max-width: 323px;
+    }
+
+    & :first-child div {
+      border-bottom: 1px solid $dark;
+    }
+    .hr {
+      display: none;
+    }
   }
 
   .listItemNumber {

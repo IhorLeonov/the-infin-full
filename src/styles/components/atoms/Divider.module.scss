@@ -15,7 +15,7 @@
 
 @media screen and (min-width: $largeScreen) {
   .hr {
-    margin-bottom: sizeVW(30);
-    height: sizeVW(1);
+    margin-bottom: vw(30);
+    height: vw(1);
   }
 }
