@@ -1,7 +1,67 @@
+@import '../../functions';
+@import '../../mixins';
+@import '../../variables';
+
 .cursor {
   position: fixed;
   z-index: 1;
 
-  transform: translate(-50%, -50%);
+  transform: translate(-49.5%, -50%);
   pointer-events: none;
+
+  animation:
+    spin 9s infinite ease-in-out,
+    opacityChange 9s infinite ease-in-out;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-template-rows: repeat(5, auto);
+  row-gap: 14px;
+  column-gap: 8px;
+
+  svg {
+    stroke: #f5d248;
+
+    width: 39px;
+    height: 39px;
+  }
+}
+
+@media screen and (min-width: $largeScreen) {
+  .grid {
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: repeat(5, auto);
+    gap: sizeVW(14);
+
+    svg {
+      width: sizeVW(39);
+      height: sizeVW(39);
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-49.5%, -50%) rotate(0deg);
+  }
+  14% {
+    transform: translate(-49.5%, -50%) rotate(360deg);
+  }
+  100% {
+    transform: translate(-49.5%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes opacityChange {
+  0% {
+    opacity: 0;
+  }
+  14% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }

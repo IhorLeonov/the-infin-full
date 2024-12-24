@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import styles from '../styles/components/ClientLayout.module.scss';
 
 import Header from './organisms/Header';
@@ -16,8 +16,15 @@ interface ClientLayotProps {
 
 export default function ClientLayout({ children }: ClientLayotProps) {
   const { showAllDom, setShowAllDom } = useContext(AppContext) as IAppContext;
-  const { light, dark, grey } = colors;
+
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
+
+  const { light, dark, grey } = colors;
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const backgroundColor = () => {
     switch (pathname) {
@@ -40,7 +47,7 @@ export default function ClientLayout({ children }: ClientLayotProps) {
 
   return (
     <>
-      <WelcomeAnimation setShowAllDom={setShowAllDom} />
+      {mounted && <WelcomeAnimation setShowAllDom={setShowAllDom} />}
       {showAllDom && (
         <div
           className={styles.layout}

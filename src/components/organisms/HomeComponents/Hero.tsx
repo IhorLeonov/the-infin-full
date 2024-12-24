@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../../../styles/components/organisms/Home/Hero.module.scss';
 
 import Image from 'next/image';
@@ -10,14 +10,23 @@ import { Section } from '../../atoms/Section';
 import { Button } from '../../atoms/Button';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
+import Cursor from '@/components/atoms/Cursor';
 
 interface HeroProps {}
 
 export default function Hero({}: HeroProps) {
+  const [cursorDisplay, setCursorDisplay] = useState<'block' | 'none'>('none');
+
   const router = useRouter();
 
   return (
-    <Section id="home" className={styles.hero} type="ghost">
+    <Section
+      id="home"
+      className={styles.hero}
+      type="ghost"
+      onMouseLeave={() => setCursorDisplay('none')}
+      onMouseOver={() => setCursorDisplay('block')}
+    >
       <div className={styles.topBlock}>
         <p className={styles.smallText}>
           <span>Web + Mobile app</span>
@@ -54,14 +63,14 @@ export default function Hero({}: HeroProps) {
             To know your true value, Help others understand theirs.
           </h2>
 
-          <motion.div
+          {/* <motion.div
             className={styles.plusesGrid}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 3, delay: 1 }}
           >
-            {/* <PlusesGrid /> */}
-          </motion.div>
+            <PlusesGrid />
+          </motion.div> */}
         </motion.div>
 
         <Button
@@ -72,6 +81,8 @@ export default function Hero({}: HeroProps) {
           Schedule a demo
         </Button>
       </div>
+
+      <Cursor cursorDisplay={cursorDisplay} className={styles.cursor} />
     </Section>
   );
 }

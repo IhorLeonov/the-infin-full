@@ -19,6 +19,7 @@
 
   overflow: hidden;
   width: 201px;
+  z-index: 2;
 }
 
 .image {
@@ -41,9 +42,9 @@
   @include h2;
   position: relative;
   z-index: 2;
+  // background-color: $grey;
 
   max-width: 910px;
-  // background-color: $grey;
 
   &::selection {
     background: $accent;
@@ -90,6 +91,7 @@
   align-self: end;
   width: 179px;
   margin-right: 45px;
+  z-index: 2;
 }
 
 @media screen and (min-width: $largeScreen) {
